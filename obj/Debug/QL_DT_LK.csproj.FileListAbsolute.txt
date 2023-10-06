@@ -1,0 +1,16 @@
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\QL_DT_LK.exe.config
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\QL_DT_LK.exe
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\QL_DT_LK.pdb
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.csproj.AssemblyReference.cache
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.Properties.Resources.resources
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.View.FormLogin.resources
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.csproj.GenerateResource.cache
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.csproj.CoreCompileInputs.cache
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.exe
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.pdb
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\EntityFramework.dll
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\EntityFramework.xml
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.View.FormMenu.resources
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.csproj.CopyComplete
