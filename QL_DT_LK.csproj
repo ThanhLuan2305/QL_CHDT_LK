@@ -140,6 +140,12 @@
     <Compile Include="View\FormNhaCC.Designer.cs">
       <DependentUpon>FormNhaCC.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSanPham.Designer.cs">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormXuatHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormNhaCC.resx">
       <DependentUpon>FormNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSanPham.resx">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormXuatHoaDon.resx">
       <DependentUpon>FormXuatHoaDon.cs</DependentUpon>

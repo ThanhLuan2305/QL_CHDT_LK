@@ -102,5 +102,12 @@ namespace QL_DT_LK.View
             LoadForm(a);
             ActiveColor(btnAddDH);
         }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            FormSanPham a = new FormSanPham();
+            LoadForm(a);
+            ActiveColor(btnAddDH);
+        }
     }
 }
