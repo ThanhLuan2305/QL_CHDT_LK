@@ -109,5 +109,24 @@ namespace QL_DT_LK.View
             LoadForm(a);
             ActiveColor(btnAddDH);
         }
+
+        private void btnNhanvien_Click(object sender, EventArgs e)
+        {
+            FormNhanVien a = new FormNhanVien();
+            LoadForm(a);
+            ActiveColor(btnNhanvien);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất tài khoản không  ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                FormLogin a = new FormLogin();
+                a.ShowDialog();
+            }
+        }
     }
 }

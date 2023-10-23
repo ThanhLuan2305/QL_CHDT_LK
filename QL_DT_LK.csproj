@@ -140,6 +140,12 @@
     <Compile Include="View\FormNhaCC.Designer.cs">
       <DependentUpon>FormNhaCC.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\FormChiTietDH.resx">
       <DependentUpon>FormChiTietDH.cs</DependentUpon>
@@ -175,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormNhaCC.resx">
       <DependentUpon>FormNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
@@ -215,6 +225,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\parrish-freeman-K2W8TIxcuko-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

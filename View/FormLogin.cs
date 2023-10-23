@@ -28,6 +28,43 @@ namespace QL_DT_LK.View
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkViewPassWord_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkViewPassWord.Checked)
+            {
+                txtPassWoud.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassWoud.PasswordChar = '*';
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            txtUserName.Text = "Admin";
+            txtPassWoud.Text = "123";
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 if (txtUserName.Text == "" || txtPassWoud.Text == "")
@@ -69,12 +106,7 @@ namespace QL_DT_LK.View
             }
         }
 
-        private void txtUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkViewPassWord_CheckedChanged(object sender, EventArgs e)
+        private void checkViewPassWord_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkViewPassWord.Checked)
             {
@@ -84,11 +116,6 @@ namespace QL_DT_LK.View
             {
                 txtPassWoud.PasswordChar = '*';
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

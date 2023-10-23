@@ -83,8 +83,8 @@
             // 
             // vbButton1
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.vbButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.vbButton1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.vbButton1.BorderRadius = 14;
             this.vbButton1.BorderSize = 0;
@@ -102,8 +102,8 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdd.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnAdd.BorderRadius = 14;
             this.btnAdd.BorderSize = 0;
@@ -124,8 +124,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDelete.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnDelete.BorderRadius = 14;
             this.btnDelete.BorderSize = 0;
@@ -146,8 +146,8 @@
             // 
             // btnReset
             // 
-            this.btnReset.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnReset.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnReset.BorderRadius = 14;
             this.btnReset.BorderSize = 0;
@@ -179,8 +179,8 @@
             // 
             // btnReplace
             // 
-            this.btnReplace.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnReplace.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.btnReplace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReplace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnReplace.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnReplace.BorderRadius = 14;
             this.btnReplace.BorderSize = 0;
