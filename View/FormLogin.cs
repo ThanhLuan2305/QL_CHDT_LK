@@ -47,7 +47,6 @@ namespace QL_DT_LK.View
                             FormMenu a = new FormMenu();
                             GetDataUser.tentaikhoan = tg.TaiKhoan1;
                             GetDataUser.phanquyen = tg.PhanQuyen;
-                            MessageBox.Show("Đăng nhập thành công !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                             this.Hide();
                             a.ShowDialog();
                             a.BringToFront();
@@ -71,6 +70,23 @@ namespace QL_DT_LK.View
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkViewPassWord_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkViewPassWord.Checked)
+            {
+                txtPassWoud.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassWoud.PasswordChar = '*';
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

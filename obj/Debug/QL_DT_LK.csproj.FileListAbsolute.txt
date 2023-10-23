@@ -30,3 +30,7 @@ C:\Users\quoc\Documents\monhoc_nam3_ky1\.net\QL_CuaHangDienThoaiPhuKien\obj\Debu
 C:\Users\quoc\Documents\monhoc_nam3_ky1\.net\QL_CuaHangDienThoaiPhuKien\obj\Debug\QL_DT_LK.csproj.CopyComplete
 C:\Users\quoc\Documents\monhoc_nam3_ky1\.net\QL_CuaHangDienThoaiPhuKien\obj\Debug\QL_DT_LK.exe
 C:\Users\quoc\Documents\monhoc_nam3_ky1\.net\QL_CuaHangDienThoaiPhuKien\obj\Debug\QL_DT_LK.pdb
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.View.FormNhaCC.resources
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.View.FormDonhang.resources
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.View.FormChiTietDH.resources
+C:\Users\Batolo\Desktop\.net\QL_DT_LK\obj\Debug\QL_DT_LK.View.FormXuatHoaDon.resources

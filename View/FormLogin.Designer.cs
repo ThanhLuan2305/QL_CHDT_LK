@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogin = new CustomButton.VBButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkViewPassWord = new System.Windows.Forms.CheckBox();
@@ -37,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLogin = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 450);
             this.panel1.TabIndex = 2;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLogin.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLogin.BorderRadius = 20;
+            this.btnLogin.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(69, 290);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(188, 45);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.TextColor = System.Drawing.Color.White;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
@@ -96,6 +115,7 @@
             this.checkViewPassWord.TabIndex = 5;
             this.checkViewPassWord.Text = "Hiện Thị Mật Khẩu";
             this.checkViewPassWord.UseVisualStyleBackColor = false;
+            this.checkViewPassWord.CheckedChanged += new System.EventHandler(this.checkViewPassWord_CheckedChanged);
             // 
             // txtPassWoud
             // 
@@ -134,6 +154,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -144,25 +165,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 450);
             this.panel2.TabIndex = 3;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnLogin.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLogin.BorderRadius = 20;
-            this.btnLogin.BorderSize = 0;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(69, 290);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(188, 45);
-            this.btnLogin.TabIndex = 9;
-            this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.TextColor = System.Drawing.Color.White;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FormLogin
             // 

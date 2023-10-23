@@ -16,5 +16,91 @@ namespace QL_DT_LK.View
         {
             InitializeComponent();
         }
+
+        private Form formNow;
+
+        private void LoadForm(Form formnew)
+        {
+            if (formNow != null)
+            {
+                formNow.Close();
+            }
+            formNow = formnew;
+            formnew.TopLevel = false;
+            formnew.FormBorderStyle = FormBorderStyle.None;
+            formnew.Dock = DockStyle.Fill;
+            panel6.Controls.Add(formnew);
+            panel6.Tag = formnew;
+            formnew.BringToFront();
+            formnew.Show();
+        }
+
+        private Button ButtonNow;
+
+
+        private void ActiveColor(Button ButtonNew)
+        {
+            if (ButtonNow != null)
+            {
+                ButtonNow.ForeColor = Color.White;
+                ButtonNow = ButtonNew;
+                ButtonNew.ForeColor = Color.DarkGreen;
+
+            }
+        }
+
+        private void btnNhacc_Click(object sender, EventArgs e)
+        {
+            FormNhaCC a = new FormNhaCC();
+            LoadForm(a);
+            ActiveColor(btnNhacc);
+        }
+
+        static string GetTimeNow()
+        {
+            DateTime date = DateTime.Now; // Lấy thời điểm hiện tại
+
+            string dayOfWeek = date.ToString("dddd"); // Lấy thứ trong tuần
+            string dayOfMonth = date.Day.ToString(); // Lấy ngày trong tháng
+            string month = date.Month.ToString(); // Lấy tên của tháng
+            string year = date.Year.ToString(); // Lấy năm
+
+            return $"{dayOfWeek}, ngày {dayOfMonth}/{month}/{year}";
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            lblUserName.Text = FormLogin.GetDataUser.tentaikhoan;
+            lblPhanQuyen.Text = FormLogin.GetDataUser.phanquyen;
+            //Gettime
+            lblDateTime.Text = GetTimeNow();
+            if (lblPhanQuyen.Text == "Nhân Viên")
+            {
+                btnNhanvien.Visible = false;
+                btnThongke.Visible = false;
+            }
+            ButtonNow = btnTrangchu;
+            ButtonNow.ForeColor = Color.DarkGreen;
+
+
+
+        }
+
+        private void panelBody_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddDH_Click(object sender, EventArgs e)
+        {
+            FormDonhang a = new FormDonhang();
+            LoadForm(a);
+            ActiveColor(btnAddDH);
+        }
     }
 }
