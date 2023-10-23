@@ -122,6 +122,18 @@
     <Compile Include="View\FormDonhang.Designer.cs">
       <DependentUpon>FormDonhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormKhoaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormKhoaHang.Designer.cs">
+      <DependentUpon>FormKhoaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormKhongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormKhongKe.Designer.cs">
+      <DependentUpon>FormKhongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <Compile Include="View\FormNhanVien.Designer.cs">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNhapHang.Designer.cs">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormSanPham.cs">
       <SubType>Form</SubType>
@@ -174,6 +192,12 @@
     <EmbeddedResource Include="View\FormDonhang.resx">
       <DependentUpon>FormDonhang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormKhoaHang.resx">
+      <DependentUpon>FormKhoaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormKhongKe.resx">
+      <DependentUpon>FormKhongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNhapHang.resx">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
