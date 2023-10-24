@@ -107,7 +107,7 @@ namespace QL_DT_LK.View
         {
             FormSanPham a = new FormSanPham();
             LoadForm(a);
-            ActiveColor(btnAddDH);
+            ActiveColor(btnSanPham);
         }
 
         private void btnNhanvien_Click(object sender, EventArgs e)
@@ -127,6 +127,26 @@ namespace QL_DT_LK.View
                 FormLogin a = new FormLogin();
                 a.ShowDialog();
             }
+        }
+
+        private void btnKhohang_Click(object sender, EventArgs e)
+        {
+            FormKhoHang a = new FormKhoHang();
+            LoadForm(a);
+            ActiveColor(btnKhohang);
+        }
+
+        private void btnThongke_Click(object sender, EventArgs e)
+        {
+            FormThongKe a = new FormThongKe();
+            LoadForm(a);
+            ActiveColor(btnThongke);
+        }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            panel6.Controls.Clear();
+            ActiveColor(btnTrangchu);
         }
     }
 }

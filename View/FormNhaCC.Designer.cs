@@ -276,10 +276,10 @@
             this.dtgrvHienThiListNCC.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dtgrvHienThiListNCC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(0, 64, 64);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(0,64,64);
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgrvHienThiListNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -323,7 +323,6 @@
             this.dtgrvHienThiListNCC.Size = new System.Drawing.Size(997, 245);
             this.dtgrvHienThiListNCC.TabIndex = 0;
             this.dtgrvHienThiListNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrvHienThiListNCC_CellClick);
-
             // 
             // MaNV
             // 
@@ -432,7 +431,7 @@
             this.ClientSize = new System.Drawing.Size(1003, 491);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormNhaCC";
             this.Text = "FormNhaCC";
             this.Load += new System.EventHandler(this.FormNhaCC_Load);

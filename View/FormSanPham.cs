@@ -46,11 +46,6 @@ namespace QL_DT_LK.View
             dtgrvHienThiListSP.DataSource = GetListSP();
         }
 
-        private void btnAddNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormSanPham_Load(object sender, EventArgs e)
         {
             LoadComboBoxNCC();
@@ -90,7 +85,22 @@ namespace QL_DT_LK.View
             }
 
         }
+        public bool checkItemCombobox()
+        {
+            bool TestTG = false;
 
+            foreach (var i in GetDSNCC())
+            {
+                if (cbbNCC.Text == i.ToString())
+                {
+                    TestTG = true;
+                    break;
+                }
+            }
+
+            return TestTG;
+
+        }
         private void dtgrvHienThiListSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -107,6 +117,165 @@ namespace QL_DT_LK.View
             catch
             {
                 MessageBox.Show("Có lỗi khi thực hiện chức năng này !");
+            }
+        }
+
+        private void btnAddNV_Click(object sender, EventArgs e)
+        {
+            if (ObjectSP() != null)
+            {
+                SanPham a = ObjectSP();
+                if (checkItemCombobox())
+                {
+                    if (ql.AddSP(a))
+                    {
+                        listSP.Add(a);
+                        LoadDataGridView();
+                        MessageBox.Show("Thêm sản phẩm thành công !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã sản phẩm này đã tồn tại !");
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Chỉ chọn dữ liệu nhà cung cấp có trong cửa hàng !");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu !");
+            }
+        }
+
+        private void btnReplaceNV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ObjectSP() != null)
+                {
+                    if (checkItemCombobox())
+                    {
+                        if (ql.ReplaceSP(ObjectSP()))
+                        {
+                            LoadDataGridView();
+                            MessageBox.Show("Sửa sản phẩm thành công !");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sản phẩm này không tồn tại !");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chỉ chọn dữ liệu nhà cung cấp có trong cửa hàng !");
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin của 1 sản phẩm !");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Có lỗi khi sửa sản phẩm !");
+            }
+        }
+
+        private void btnDeleteNV_Click(object sender, EventArgs e)
+        {
+            if (txtMaSP.Text != "")
+            {
+                if (!ql.KiemTraKhoaNgoai(txtMaSP.Text))
+                {
+                    if (ql.DeleteSP(ObjectSP().MaSP))
+                    {
+                        listSP.Remove(ObjectSP());
+                        LoadDataGridView();
+                        MessageBox.Show("Xóa sản phẩm thành công !");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy sản phẩm cần xóa !");
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Sản phẩm này đang là khóa ngoại của bảng khác nên không thể xóa vào lúc này !");
+                }
+
+            }
+            else
+            {
+
+                MessageBox.Show("Vui lòng nhập mã sản phẩm cần xóa !");
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtMaSP.Text = "";
+            txtTenSP.Text = "";
+            cbbNCC.Text = "  Chọn nhà cung cấp";
+            cbbHangSP.Text = "  Chọn hãng sản phẩm";
+            cbbXuatxu.Text = "  Chọn xuất xứ";
+            cbbTheloai.Text = "Chọn thể loại";
+            txtGiaBan.Text = "";
+            LoadDataGridView();
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTimKiem.Text != "")
+                {
+                    List<SanPham> list = ql.Insert(txtTimKiem.Text);
+                    if (list.Count > 0)
+                    {
+                        var listTG = list.Select(p => new { p.MaSP, p.MaNCC, p.HangSP, p.TenSP, p.TheLoai, p.XuatXu, p.Giaban });
+                        dtgrvHienThiListSP.DataSource = listTG.ToList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy sản phẩm nào !");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Hãy nhập từ khóa để tìm kiếm !");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Có lỗi khi tìm kiếm sản phẩm !");
+            }
+        }
+
+        private void txtTimKiem_Leave(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text == "")
+            {
+                txtTimKiem.Text = "    Tìm kiếm";
+                txtTimKiem.ForeColor = Color.DarkGray;
+
+            }
+        }
+
+        private void txtTimKiem_Enter(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text == "    Tìm kiếm")
+            {
+                txtTimKiem.Text = "";
+                txtTimKiem.ForeColor = Color.Black;
             }
         }
     }

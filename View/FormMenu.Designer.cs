@@ -112,6 +112,7 @@
             this.btnThongke.TextColor = System.Drawing.Color.White;
             this.btnThongke.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongke.UseVisualStyleBackColor = false;
+            this.btnThongke.Click += new System.EventHandler(this.btnThongke_Click);
             // 
             // btnKhohang
             // 
@@ -136,6 +137,7 @@
             this.btnKhohang.TextColor = System.Drawing.Color.White;
             this.btnKhohang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhohang.UseVisualStyleBackColor = false;
+            this.btnKhohang.Click += new System.EventHandler(this.btnKhohang_Click);
             // 
             // btnNhanvien
             // 
@@ -284,6 +286,7 @@
             this.btnTrangchu.TextColor = System.Drawing.Color.White;
             this.btnTrangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTrangchu.UseVisualStyleBackColor = false;
+            this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
             // label1
             // 

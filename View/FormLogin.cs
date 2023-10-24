@@ -117,5 +117,13 @@ namespace QL_DT_LK.View
                 txtPassWoud.PasswordChar = '*';
             }
         }
+
+        private void txtPassWoud_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
     }
 }
