@@ -122,6 +122,7 @@ namespace QL_DT_LK.View
             LoadDataGridView();
         }
 
+
         private void dtgrvHienThiListSP_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dtgrvHienThiListSP.CurrentCell = null;

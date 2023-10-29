@@ -278,5 +278,6 @@ namespace QL_DT_LK.View
                 txtTimKiem.ForeColor = Color.Black;
             }
         }
+
     }
 }

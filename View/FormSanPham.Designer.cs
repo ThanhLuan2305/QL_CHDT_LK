@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgrvHienThiListSP = new System.Windows.Forms.DataGridView();
             this.clMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +42,6 @@
             this.clXuatXu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddNV = new CustomButton.VBButton();
-            this.btnDeleteNV = new CustomButton.VBButton();
-            this.btnReplaceNV = new CustomButton.VBButton();
-            this.btnReset = new CustomButton.VBButton();
             this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbbXuatxu = new System.Windows.Forms.ComboBox();
@@ -55,7 +51,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbbNCC = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimkiem = new CustomButton.VBButton();
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,6 +58,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAddNV = new CustomButton.VBButton();
+            this.btnDeleteNV = new CustomButton.VBButton();
+            this.btnReplaceNV = new CustomButton.VBButton();
+            this.btnReset = new CustomButton.VBButton();
+            this.btnTimkiem = new CustomButton.VBButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvHienThiListSP)).BeginInit();
             this.panel1.SuspendLayout();
@@ -92,14 +92,14 @@
             this.dtgrvHienThiListSP.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgrvHienThiListSP.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dtgrvHienThiListSP.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvHienThiListSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvHienThiListSP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrvHienThiListSP.ColumnHeadersHeight = 33;
             this.dtgrvHienThiListSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgrvHienThiListSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -110,14 +110,14 @@
             this.clTheloai,
             this.clXuatXu,
             this.clGiaBan});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvHienThiListSP.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvHienThiListSP.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgrvHienThiListSP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgrvHienThiListSP.EnableHeadersVisualStyles = false;
             this.dtgrvHienThiListSP.GridColor = System.Drawing.SystemColors.MenuHighlight;
@@ -125,19 +125,19 @@
             this.dtgrvHienThiListSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgrvHienThiListSP.Name = "dtgrvHienThiListSP";
             this.dtgrvHienThiListSP.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgrvHienThiListSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgrvHienThiListSP.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrvHienThiListSP.RowHeadersVisible = false;
             this.dtgrvHienThiListSP.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            this.dtgrvHienThiListSP.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            this.dtgrvHienThiListSP.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgrvHienThiListSP.RowTemplate.Height = 28;
             this.dtgrvHienThiListSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgrvHienThiListSP.Size = new System.Drawing.Size(973, 262);
@@ -219,91 +219,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(149, 239);
             this.panel1.TabIndex = 26;
-            // 
-            // btnAddNV
-            // 
-            this.btnAddNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddNV.BorderColor = System.Drawing.Color.White;
-            this.btnAddNV.BorderRadius = 14;
-            this.btnAddNV.BorderSize = 0;
-            this.btnAddNV.FlatAppearance.BorderSize = 0;
-            this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNV.ForeColor = System.Drawing.Color.White;
-            this.btnAddNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNV.Location = new System.Drawing.Point(3, 30);
-            this.btnAddNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddNV.Name = "btnAddNV";
-            this.btnAddNV.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnAddNV.Size = new System.Drawing.Size(132, 34);
-            this.btnAddNV.TabIndex = 14;
-            this.btnAddNV.Text = "    Thêm";
-            this.btnAddNV.TextColor = System.Drawing.Color.White;
-            this.btnAddNV.UseVisualStyleBackColor = false;
-            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
-            // 
-            // btnDeleteNV
-            // 
-            this.btnDeleteNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDeleteNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDeleteNV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDeleteNV.BorderRadius = 14;
-            this.btnDeleteNV.BorderSize = 0;
-            this.btnDeleteNV.FlatAppearance.BorderSize = 0;
-            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteNV.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteNV.Location = new System.Drawing.Point(3, 124);
-            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnDeleteNV.Size = new System.Drawing.Size(132, 34);
-            this.btnDeleteNV.TabIndex = 15;
-            this.btnDeleteNV.Text = "    Xóa";
-            this.btnDeleteNV.TextColor = System.Drawing.Color.White;
-            this.btnDeleteNV.UseVisualStyleBackColor = false;
-            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
-            // 
-            // btnReplaceNV
-            // 
-            this.btnReplaceNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReplaceNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReplaceNV.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnReplaceNV.BorderRadius = 14;
-            this.btnReplaceNV.BorderSize = 0;
-            this.btnReplaceNV.FlatAppearance.BorderSize = 0;
-            this.btnReplaceNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReplaceNV.ForeColor = System.Drawing.Color.White;
-            this.btnReplaceNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReplaceNV.Location = new System.Drawing.Point(3, 74);
-            this.btnReplaceNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReplaceNV.Name = "btnReplaceNV";
-            this.btnReplaceNV.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnReplaceNV.Size = new System.Drawing.Size(132, 34);
-            this.btnReplaceNV.TabIndex = 16;
-            this.btnReplaceNV.Text = "    Sửa";
-            this.btnReplaceNV.TextColor = System.Drawing.Color.White;
-            this.btnReplaceNV.UseVisualStyleBackColor = false;
-            this.btnReplaceNV.Click += new System.EventHandler(this.btnReplaceNV_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnReset.BorderRadius = 14;
-            this.btnReset.BorderSize = 0;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(3, 174);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(132, 37);
-            this.btnReset.TabIndex = 17;
-            this.btnReset.TextColor = System.Drawing.Color.White;
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtGiaBan
             // 
@@ -442,28 +357,6 @@
             this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
             this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
-            // btnTimkiem
-            // 
-            this.btnTimkiem.BackColor = System.Drawing.Color.White;
-            this.btnTimkiem.BackgroundColor = System.Drawing.Color.White;
-            this.btnTimkiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTimkiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimkiem.BorderRadius = 0;
-            this.btnTimkiem.BorderSize = 0;
-            this.btnTimkiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimkiem.FlatAppearance.BorderSize = 0;
-            this.btnTimkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimkiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimkiem.Location = new System.Drawing.Point(483, 210);
-            this.btnTimkiem.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
-            this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(89, 25);
-            this.btnTimkiem.TabIndex = 8;
-            this.btnTimkiem.Text = "Tìm kiếm";
-            this.btnTimkiem.TextColor = System.Drawing.Color.Black;
-            this.btnTimkiem.UseVisualStyleBackColor = false;
-            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
-            // 
             // txtTenSP
             // 
             this.txtTenSP.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -553,6 +446,119 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
+            // 
+            // btnAddNV
+            // 
+            this.btnAddNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddNV.BorderColor = System.Drawing.Color.White;
+            this.btnAddNV.BorderRadius = 14;
+            this.btnAddNV.BorderSize = 0;
+            this.btnAddNV.FlatAppearance.BorderSize = 0;
+            this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNV.ForeColor = System.Drawing.Color.White;
+            this.btnAddNV.Image = global::QL_DT_LK.Properties.Resources.add_user;
+            this.btnAddNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNV.Location = new System.Drawing.Point(8, 19);
+            this.btnAddNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddNV.Name = "btnAddNV";
+            this.btnAddNV.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnAddNV.Size = new System.Drawing.Size(132, 47);
+            this.btnAddNV.TabIndex = 14;
+            this.btnAddNV.Text = "    Thêm";
+            this.btnAddNV.TextColor = System.Drawing.Color.White;
+            this.btnAddNV.UseVisualStyleBackColor = false;
+            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
+            // 
+            // btnDeleteNV
+            // 
+            this.btnDeleteNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDeleteNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDeleteNV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDeleteNV.BorderRadius = 14;
+            this.btnDeleteNV.BorderSize = 0;
+            this.btnDeleteNV.FlatAppearance.BorderSize = 0;
+            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteNV.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteNV.Image = global::QL_DT_LK.Properties.Resources.delete;
+            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteNV.Location = new System.Drawing.Point(8, 123);
+            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteNV.Name = "btnDeleteNV";
+            this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnDeleteNV.Size = new System.Drawing.Size(132, 42);
+            this.btnDeleteNV.TabIndex = 15;
+            this.btnDeleteNV.Text = "    Xóa";
+            this.btnDeleteNV.TextColor = System.Drawing.Color.White;
+            this.btnDeleteNV.UseVisualStyleBackColor = false;
+            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
+            // 
+            // btnReplaceNV
+            // 
+            this.btnReplaceNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReplaceNV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReplaceNV.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReplaceNV.BorderRadius = 14;
+            this.btnReplaceNV.BorderSize = 0;
+            this.btnReplaceNV.FlatAppearance.BorderSize = 0;
+            this.btnReplaceNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReplaceNV.ForeColor = System.Drawing.Color.White;
+            this.btnReplaceNV.Image = global::QL_DT_LK.Properties.Resources.wrench;
+            this.btnReplaceNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReplaceNV.Location = new System.Drawing.Point(8, 70);
+            this.btnReplaceNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReplaceNV.Name = "btnReplaceNV";
+            this.btnReplaceNV.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnReplaceNV.Size = new System.Drawing.Size(132, 49);
+            this.btnReplaceNV.TabIndex = 16;
+            this.btnReplaceNV.Text = "    Sửa";
+            this.btnReplaceNV.TextColor = System.Drawing.Color.White;
+            this.btnReplaceNV.UseVisualStyleBackColor = false;
+            this.btnReplaceNV.Click += new System.EventHandler(this.btnReplaceNV_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReset.BorderRadius = 14;
+            this.btnReset.BorderSize = 0;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Image = global::QL_DT_LK.Properties.Resources.reset__1_;
+            this.btnReset.Location = new System.Drawing.Point(8, 169);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(132, 47);
+            this.btnReset.TabIndex = 17;
+            this.btnReset.TextColor = System.Drawing.Color.White;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnTimkiem
+            // 
+            this.btnTimkiem.BackColor = System.Drawing.Color.White;
+            this.btnTimkiem.BackgroundColor = System.Drawing.Color.White;
+            this.btnTimkiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimkiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimkiem.BorderRadius = 0;
+            this.btnTimkiem.BorderSize = 0;
+            this.btnTimkiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimkiem.FlatAppearance.BorderSize = 0;
+            this.btnTimkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimkiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimkiem.Image = global::QL_DT_LK.Properties.Resources.search__1_;
+            this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimkiem.Location = new System.Drawing.Point(459, 210);
+            this.btnTimkiem.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Size = new System.Drawing.Size(113, 25);
+            this.btnTimkiem.TabIndex = 8;
+            this.btnTimkiem.Text = "  Tìm kiếm";
+            this.btnTimkiem.TextColor = System.Drawing.Color.Black;
+            this.btnTimkiem.UseVisualStyleBackColor = false;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // FormSanPham
             // 

@@ -36,7 +36,6 @@ D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKie
 D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\bin\Release\System.Memory.xml
 D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\bin\Release\System.Numerics.Vectors.xml
 D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
-D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\obj\Release\QL_DT_LK.View.FormKhoaHang.resources
 D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\obj\Release\QL_DT_LK.View.FormNhapHang.resources
 D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\obj\Release\QL_DT_LK.View.FormThongKe.resources
 D:\Users\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\QL_CuaHangDienThoaiPhuKien\obj\Release\QL_DT_LK.View.FormKhoHang.resources

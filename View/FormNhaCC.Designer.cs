@@ -34,11 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnTimkiem = new CustomButton.VBButton();
             this.vbButton1 = new CustomButton.VBButton();
-            this.btnAdd = new CustomButton.VBButton();
-            this.btnDelete = new CustomButton.VBButton();
-            this.btnReset = new CustomButton.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReplace = new CustomButton.VBButton();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.txtTenNhaCC = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -55,6 +51,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdd = new CustomButton.VBButton();
+            this.btnDelete = new CustomButton.VBButton();
+            this.btnReset = new CustomButton.VBButton();
+            this.btnReplace = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvHienThiListNCC)).BeginInit();
@@ -83,15 +83,15 @@
             // 
             // vbButton1
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.vbButton1.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.vbButton1.BorderRadius = 14;
             this.vbButton1.BorderSize = 0;
             this.vbButton1.FlatAppearance.BorderSize = 0;
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(29, 166);
+            this.vbButton1.Location = new System.Drawing.Point(29, 124);
             this.vbButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton1.Name = "vbButton1";
             this.vbButton1.Size = new System.Drawing.Size(132, 37);
@@ -99,69 +99,6 @@
             this.vbButton1.Text = "Xuất Excel";
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAdd.BorderRadius = 14;
-            this.btnAdd.BorderSize = 0;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(29, 4);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnAdd.Size = new System.Drawing.Size(132, 36);
-            this.btnAdd.TabIndex = 14;
-            this.btnAdd.Text = "    Thêm";
-            this.btnAdd.TextColor = System.Drawing.Color.White;
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDelete.BorderRadius = 14;
-            this.btnDelete.BorderSize = 0;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(29, 87);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(132, 36);
-            this.btnDelete.TabIndex = 15;
-            this.btnDelete.Text = "    Xóa";
-            this.btnDelete.TextColor = System.Drawing.Color.White;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnReset.BorderRadius = 14;
-            this.btnReset.BorderSize = 0;
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(29, 127);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(132, 37);
-            this.btnReset.TabIndex = 17;
-            this.btnReset.TextColor = System.Drawing.Color.White;
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // panel1
             // 
@@ -176,28 +113,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 205);
             this.panel1.TabIndex = 18;
-            // 
-            // btnReplace
-            // 
-            this.btnReplace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReplace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReplace.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnReplace.BorderRadius = 14;
-            this.btnReplace.BorderSize = 0;
-            this.btnReplace.FlatAppearance.BorderSize = 0;
-            this.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReplace.ForeColor = System.Drawing.Color.White;
-            this.btnReplace.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReplace.Location = new System.Drawing.Point(29, 47);
-            this.btnReplace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReplace.Name = "btnReplace";
-            this.btnReplace.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnReplace.Size = new System.Drawing.Size(132, 36);
-            this.btnReplace.TabIndex = 16;
-            this.btnReplace.Text = "    Sửa";
-            this.btnReplace.TextColor = System.Drawing.Color.White;
-            this.btnReplace.UseVisualStyleBackColor = false;
-            this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
             // 
             // txtTimKiem
             // 
@@ -260,7 +175,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1003, 265);
+            this.groupBox2.Size = new System.Drawing.Size(1003, 323);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách nhà cung cấp";
@@ -270,7 +185,7 @@
             this.dtgrvHienThiListNCC.AllowUserToResizeColumns = false;
             this.dtgrvHienThiListNCC.AllowUserToResizeRows = false;
             this.dtgrvHienThiListNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgrvHienThiListNCC.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgrvHienThiListNCC.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtgrvHienThiListNCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgrvHienThiListNCC.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dtgrvHienThiListNCC.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
@@ -279,7 +194,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(0,64,64);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgrvHienThiListNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -300,7 +215,7 @@
             this.dtgrvHienThiListNCC.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgrvHienThiListNCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgrvHienThiListNCC.EnableHeadersVisualStyles = false;
-            this.dtgrvHienThiListNCC.GridColor = System.Drawing.SystemColors.MenuBar;
+            this.dtgrvHienThiListNCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtgrvHienThiListNCC.Location = new System.Drawing.Point(3, 18);
             this.dtgrvHienThiListNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgrvHienThiListNCC.Name = "dtgrvHienThiListNCC";
@@ -320,7 +235,7 @@
             this.dtgrvHienThiListNCC.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgrvHienThiListNCC.RowTemplate.Height = 28;
             this.dtgrvHienThiListNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgrvHienThiListNCC.Size = new System.Drawing.Size(997, 245);
+            this.dtgrvHienThiListNCC.Size = new System.Drawing.Size(997, 303);
             this.dtgrvHienThiListNCC.TabIndex = 0;
             this.dtgrvHienThiListNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrvHienThiListNCC_CellClick);
             // 
@@ -424,11 +339,100 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý nhà cung cấp";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 14;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::QL_DT_LK.Properties.Resources.add_user;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(29, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(132, 36);
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.Text = "    Thêm";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDelete.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDelete.BorderRadius = 14;
+            this.btnDelete.BorderSize = 0;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::QL_DT_LK.Properties.Resources.delete;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(29, 84);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnDelete.Size = new System.Drawing.Size(132, 36);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "    Xóa";
+            this.btnDelete.TextColor = System.Drawing.Color.White;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReset.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReset.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReset.BorderRadius = 14;
+            this.btnReset.BorderSize = 0;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Image = global::QL_DT_LK.Properties.Resources.reset__1_;
+            this.btnReset.Location = new System.Drawing.Point(29, 163);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(132, 40);
+            this.btnReset.TabIndex = 17;
+            this.btnReset.TextColor = System.Drawing.Color.White;
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnReplace
+            // 
+            this.btnReplace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReplace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnReplace.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnReplace.BorderRadius = 14;
+            this.btnReplace.BorderSize = 0;
+            this.btnReplace.FlatAppearance.BorderSize = 0;
+            this.btnReplace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReplace.ForeColor = System.Drawing.Color.White;
+            this.btnReplace.Image = global::QL_DT_LK.Properties.Resources.wrench;
+            this.btnReplace.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReplace.Location = new System.Drawing.Point(29, 44);
+            this.btnReplace.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReplace.Name = "btnReplace";
+            this.btnReplace.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnReplace.Size = new System.Drawing.Size(132, 36);
+            this.btnReplace.TabIndex = 16;
+            this.btnReplace.Text = "    Sửa";
+            this.btnReplace.TextColor = System.Drawing.Color.White;
+            this.btnReplace.UseVisualStyleBackColor = false;
+            this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
+            // 
             // FormNhaCC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 491);
+            this.ClientSize = new System.Drawing.Size(1003, 549);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);

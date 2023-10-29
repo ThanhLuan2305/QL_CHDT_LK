@@ -340,11 +340,6 @@ namespace QL_DT_LK.View
 
         }
 
-        private void dtgrvHienThiListSPChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dtgrvHienThiListSPChon_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dtgrvHienThiListSPChon.CurrentCell = null;

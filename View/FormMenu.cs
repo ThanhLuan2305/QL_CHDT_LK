@@ -44,7 +44,7 @@ namespace QL_DT_LK.View
             {
                 ButtonNow.ForeColor = Color.White;
                 ButtonNow = ButtonNew;
-                ButtonNew.ForeColor = Color.DarkGreen;
+                ButtonNew.ForeColor = Color.FromArgb(225, 82, 61);
 
             }
         }

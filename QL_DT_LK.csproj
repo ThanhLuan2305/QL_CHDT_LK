@@ -292,7 +292,56 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\parrish-freeman-K2W8TIxcuko-unsplash.jpg" />
+    <Content Include="Resources\add-user.png" />
+    <None Include="Resources\additional-plus-icon-vector.jpg" />
+    <Content Include="Resources\agreement.png" />
+    <Content Include="Resources\cach-ve-bieu-do-tron-trong-word-2-800x450.png" />
+    <Content Include="Resources\category.png" />
+    <Content Include="Resources\cesar-couto-TIvFLeqZ4ec-unsplash.jpg" />
+    <Content Include="Resources\chi-tiet-ke-hoach-mo-cua-hang-phu-kien-dien-thoai-2.jpg" />
+    <Content Include="Resources\close %281%29.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\dsBuffer.bmp.png" />
+    <Content Include="Resources\eye.png" />
+    <Content Include="Resources\group.png" />
+    <Content Include="Resources\home %281%29.png" />
+    <Content Include="Resources\home %282%29.png" />
+    <Content Include="Resources\home %283%29.png" />
+    <Content Include="Resources\home %284%29.png" />
+    <Content Include="Resources\home.png" />
+    <Content Include="Resources\home1.png" />
+    <Content Include="Resources\images.png" />
+    <Content Include="Resources\images1.png" />
+    <Content Include="Resources\logoUser.png" />
+    <Content Include="Resources\logout.png" />
+    <Content Include="Resources\marek-piwnicki-aa0FiocaS48-unsplash.jpg" />
+    <Content Include="Resources\onur-binay-9jLI9Ux6IFo-unsplash.jpg" />
+    <Content Include="Resources\onur-binay-9jLI9Ux6IFo-unsplash1.jpg" />
+    <Content Include="Resources\onur-binay-9jLI9Ux6IFo-unsplash2.jpg" />
+    <Content Include="Resources\parrish-freeman-K2W8TIxcuko-unsplash.jpg" />
+    <Content Include="Resources\parrish-freeman-K2W8TIxcuko-unsplash1.jpg" />
+    <Content Include="Resources\parrish-freeman-K2W8TIxcuko-unsplash2.jpg" />
+    <Content Include="Resources\product.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\reset %281%29.png" />
+    <Content Include="Resources\reset.png" />
+    <Content Include="Resources\samsung-memory-J8Cfm4W8gd8-unsplash.jpg" />
+    <Content Include="Resources\search %281%29.png" />
+    <Content Include="Resources\search %281%291.png" />
+    <Content Include="Resources\search %281%292.png" />
+    <Content Include="Resources\search %281%293.png" />
+    <Content Include="Resources\search.png" />
+    <Content Include="Resources\shopping-cart.png" />
+    <Content Include="Resources\tim-mossholder-8FBTtjCZ9oM-unsplash.jpg" />
+    <Content Include="Resources\trend.png" />
+    <Content Include="Resources\turn-off.png" />
+    <Content Include="Resources\usb %281%29.png" />
+    <Content Include="Resources\usb.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\wrench.png" />
+    <Content Include="Resources\z4268077877465_c29913f0ba33a65b9378a9d685788485.jpg" />
+    <None Include="Image\parrish-freeman-K2W8TIxcuko-unsplash.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
