@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QLPKDTModelStoreContainer" CdmEntityContainer="QLPKDTEntities">
+  <EntityContainerMapping StorageEntityContainer="QLPKDTModelStoreContainer" CdmEntityContainer="QLPKDTEntities1">
     <EntitySetMapping Name="ChiTietDonHangs">
       <EntityTypeMapping TypeName="QLPKDTModel.ChiTietDonHang">
         <MappingFragment StoreEntitySet="ChiTietDonHang">
@@ -66,6 +66,7 @@
           <ScalarProperty Name="XuatXu" ColumnName="XuatXu" />
           <ScalarProperty Name="Giaban" ColumnName="Giaban" />
           <ScalarProperty Name="TheLoai" ColumnName="TheLoai" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -75,6 +76,7 @@
           <ScalarProperty Name="TaiKhoan1" ColumnName="TaiKhoan" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="PhanQuyen" ColumnName="PhanQuyen" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

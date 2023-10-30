@@ -8,7 +8,7 @@ namespace QL_DT_LK.DataAcsess
 {
     public class TaiKhoanDAL
     {
-        QLPKDTEntities db = new QLPKDTEntities();
+        QLPKDTEntities1 db = new QLPKDTEntities1();
         public void AddTaiKhoan(TaiKhoan taiKhoan)
         {
             db.TaiKhoans.Add(taiKhoan);

@@ -23,6 +23,7 @@ namespace QL_DT_LK
         public string TaiKhoan1 { get; set; }
         public string MatKhau { get; set; }
         public string PhanQuyen { get; set; }
+        public string HinhAnh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVien> NhanViens { get; set; }

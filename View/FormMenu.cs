@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QL_DT_LK.View;
 
 namespace QL_DT_LK.View
 {
@@ -72,6 +73,7 @@ namespace QL_DT_LK.View
         {
             lblUserName.Text = FormLogin.GetDataUser.tentaikhoan;
             lblPhanQuyen.Text = FormLogin.GetDataUser.phanquyen;
+            lbTenHinhAnh.Text = FormLogin.GetDataUser.tenAnh; 
             //Gettime
             lblDateTime.Text = GetTimeNow();
             if (lblPhanQuyen.Text == "Nhân Viên")
@@ -80,7 +82,7 @@ namespace QL_DT_LK.View
                 btnThongke.Visible = false;
             }
             ButtonNow = btnTrangchu;
-            ButtonNow.ForeColor = Color.DarkGreen;
+            ButtonNow.ForeColor = Color.FromArgb(225, 82, 61);
 
 
 

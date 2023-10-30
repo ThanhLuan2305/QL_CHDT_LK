@@ -37,7 +37,7 @@ namespace QL_DT_LK.View
         public dynamic GetListSP()
         {
             listSP = ql.GetListSP().ToList();
-            var ListSPNew = listSP.Select(p => new { p.MaSP, p.MaNCC, p.HangSP, p.TenSP, p.TheLoai, p.XuatXu, p.Giaban }).ToList();
+            var ListSPNew = listSP.Select(p => new { p.MaSP, p.MaNCC, p.HangSP, p.TenSP, p.TheLoai, p.XuatXu, p.Giaban, p.HinhAnh }).ToList();
             return ListSPNew;
 
         }
@@ -112,11 +112,13 @@ namespace QL_DT_LK.View
                 cbbTheloai.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cbbXuatxu.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtGiaBan.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[6].Value.ToString();
-
+                string TenAnh = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value.ToString();
+                Image image = Image.FromFile(@"..\..\Image\" + TenAnh);
+                PTB_SP.Image = image;
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Có lỗi khi thực hiện chức năng này !");
+                MessageBox.Show("Có lỗi khi thực hiện chức năng này !. Lỗi: " + ex);
             }
         }
 

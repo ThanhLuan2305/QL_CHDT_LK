@@ -9,7 +9,7 @@ namespace QL_DT_LK.DataAcsess
 {
     public class DonHangDAL
     {
-        QLPKDTEntities db = new QLPKDTEntities();
+        QLPKDTEntities1 db = new QLPKDTEntities1();
         public List<DonHang> GetDonHangs()
         {
             return db.DonHangs.ToList<DonHang>();

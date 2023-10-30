@@ -13,10 +13,10 @@ namespace QL_DT_LK
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLPKDTEntities : DbContext
+    public partial class QLPKDTEntities1 : DbContext
     {
-        public QLPKDTEntities()
-            : base("name=QLPKDTEntities")
+        public QLPKDTEntities1()
+            : base("name=QLPKDTEntities1")
         {
         }
     

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lblPhanQuyen = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,9 +38,11 @@
             this.panel_Body = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.PTB_Ava = new System.Windows.Forms.PictureBox();
             this.btnNhacc = new CustomButton.VBButton();
             this.btnThongke = new CustomButton.VBButton();
             this.btnKhohang = new CustomButton.VBButton();
@@ -50,16 +51,17 @@
             this.btnLogout = new CustomButton.VBButton();
             this.btnSanPham = new CustomButton.VBButton();
             this.btnTrangchu = new CustomButton.VBButton();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbTenHinhAnh = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(143)))), ((int)(((byte)(160)))));
-            this.label4.Location = new System.Drawing.Point(32, 70);
+            this.label4.Location = new System.Drawing.Point(32, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 1);
             this.label4.TabIndex = 11;
@@ -68,6 +70,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.lbTenHinhAnh);
+            this.panel1.Controls.Add(this.PTB_Ava);
             this.panel1.Controls.Add(this.btnNhacc);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnThongke);
@@ -77,7 +81,6 @@
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnSanPham);
             this.panel1.Controls.Add(this.btnTrangchu);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -85,18 +88,6 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 16);
             this.panel1.Size = new System.Drawing.Size(239, 703);
             this.panel1.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Malgun Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(15, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Xin Chào";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDateTime
             // 
@@ -184,6 +175,16 @@
             this.panel5.Size = new System.Drawing.Size(1177, 634);
             this.panel5.TabIndex = 2;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::QL_DT_LK.Properties.Resources.user;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(76, 21);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(28, 28);
+            this.panel3.TabIndex = 3;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -218,6 +219,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(236, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // PTB_Ava
+            // 
+            this.PTB_Ava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PTB_Ava.Location = new System.Drawing.Point(13, 12);
+            this.PTB_Ava.Name = "PTB_Ava";
+            this.PTB_Ava.Size = new System.Drawing.Size(100, 100);
+            this.PTB_Ava.TabIndex = 13;
+            this.PTB_Ava.TabStop = false;
+            // 
             // btnNhacc
             // 
             this.btnNhacc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -232,7 +242,7 @@
             this.btnNhacc.ForeColor = System.Drawing.Color.White;
             this.btnNhacc.Image = global::QL_DT_LK.Properties.Resources.agreement;
             this.btnNhacc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhacc.Location = new System.Drawing.Point(11, 242);
+            this.btnNhacc.Location = new System.Drawing.Point(11, 274);
             this.btnNhacc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhacc.Name = "btnNhacc";
             this.btnNhacc.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -258,7 +268,7 @@
             this.btnThongke.ForeColor = System.Drawing.Color.White;
             this.btnThongke.Image = global::QL_DT_LK.Properties.Resources.trend;
             this.btnThongke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongke.Location = new System.Drawing.Point(11, 513);
+            this.btnThongke.Location = new System.Drawing.Point(11, 545);
             this.btnThongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongke.Name = "btnThongke";
             this.btnThongke.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -284,7 +294,7 @@
             this.btnKhohang.ForeColor = System.Drawing.Color.White;
             this.btnKhohang.Image = global::QL_DT_LK.Properties.Resources.product;
             this.btnKhohang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhohang.Location = new System.Drawing.Point(13, 378);
+            this.btnKhohang.Location = new System.Drawing.Point(13, 410);
             this.btnKhohang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKhohang.Name = "btnKhohang";
             this.btnKhohang.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -310,7 +320,7 @@
             this.btnNhanvien.ForeColor = System.Drawing.Color.White;
             this.btnNhanvien.Image = global::QL_DT_LK.Properties.Resources.group;
             this.btnNhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanvien.Location = new System.Drawing.Point(13, 438);
+            this.btnNhanvien.Location = new System.Drawing.Point(13, 470);
             this.btnNhanvien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNhanvien.Name = "btnNhanvien";
             this.btnNhanvien.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -336,7 +346,7 @@
             this.btnAddDH.ForeColor = System.Drawing.Color.White;
             this.btnAddDH.Image = global::QL_DT_LK.Properties.Resources.shopping_cart;
             this.btnAddDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddDH.Location = new System.Drawing.Point(11, 306);
+            this.btnAddDH.Location = new System.Drawing.Point(11, 338);
             this.btnAddDH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddDH.Name = "btnAddDH";
             this.btnAddDH.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -389,7 +399,7 @@
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.Image = global::QL_DT_LK.Properties.Resources.usb__1_;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(11, 178);
+            this.btnSanPham.Location = new System.Drawing.Point(11, 210);
             this.btnSanPham.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -415,7 +425,7 @@
             this.btnTrangchu.ForeColor = System.Drawing.Color.White;
             this.btnTrangchu.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangchu.Image")));
             this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.Location = new System.Drawing.Point(11, 113);
+            this.btnTrangchu.Location = new System.Drawing.Point(11, 145);
             this.btnTrangchu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
@@ -427,15 +437,16 @@
             this.btnTrangchu.UseVisualStyleBackColor = false;
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
-            // panel3
+            // lbTenHinhAnh
             // 
-            this.panel3.BackgroundImage = global::QL_DT_LK.Properties.Resources.user;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(76, 21);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(28, 28);
-            this.panel3.TabIndex = 3;
+            this.lbTenHinhAnh.AutoSize = true;
+            this.lbTenHinhAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenHinhAnh.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbTenHinhAnh.Location = new System.Drawing.Point(135, 28);
+            this.lbTenHinhAnh.Name = "lbTenHinhAnh";
+            this.lbTenHinhAnh.Size = new System.Drawing.Size(42, 20);
+            this.lbTenHinhAnh.TabIndex = 14;
+            this.lbTenHinhAnh.Text = "Null";
             // 
             // FormMenu
             // 
@@ -453,10 +464,12 @@
             this.Text = "FormMenu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,7 +485,6 @@
         private System.Windows.Forms.Panel panel1;
         private CustomButton.VBButton btnSanPham;
         private CustomButton.VBButton btnTrangchu;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Label lblPhanQuyen;
         private System.Windows.Forms.Panel panel3;
@@ -484,5 +496,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox PTB_Ava;
+        private System.Windows.Forms.Label lbTenHinhAnh;
     }
 }

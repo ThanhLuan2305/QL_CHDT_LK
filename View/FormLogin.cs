@@ -22,7 +22,7 @@ namespace QL_DT_LK.View
         {
             static public string tentaikhoan;
             static public string phanquyen;
-
+            static public string tenAnh;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -84,6 +84,7 @@ namespace QL_DT_LK.View
                             FormMenu a = new FormMenu();
                             GetDataUser.tentaikhoan = tg.TaiKhoan1;
                             GetDataUser.phanquyen = tg.PhanQuyen;
+                            GetDataUser.tenAnh = tg.HinhAnh;
                             this.Hide();
                             a.ShowDialog();
                             a.BringToFront();

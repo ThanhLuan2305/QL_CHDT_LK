@@ -58,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.PTB_SP = new System.Windows.Forms.PictureBox();
             this.btnAddNV = new CustomButton.VBButton();
             this.btnDeleteNV = new CustomButton.VBButton();
             this.btnReplaceNV = new CustomButton.VBButton();
@@ -67,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvHienThiListSP)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_SP)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -78,7 +80,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 16, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(979, 282);
+            this.groupBox2.Size = new System.Drawing.Size(1165, 399);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách các sản phẩm";
@@ -140,7 +142,7 @@
             this.dtgrvHienThiListSP.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgrvHienThiListSP.RowTemplate.Height = 28;
             this.dtgrvHienThiListSP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgrvHienThiListSP.Size = new System.Drawing.Size(973, 262);
+            this.dtgrvHienThiListSP.Size = new System.Drawing.Size(1159, 379);
             this.dtgrvHienThiListSP.TabIndex = 0;
             this.dtgrvHienThiListSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrvHienThiListSP_CellClick);
             // 
@@ -214,7 +216,7 @@
             this.panel1.Controls.Add(this.btnReplaceNV);
             this.panel1.Controls.Add(this.btnReset);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(827, 19);
+            this.panel1.Location = new System.Drawing.Point(1013, 19);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(149, 239);
@@ -351,7 +353,7 @@
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(552, 34);
+            this.txtTimKiem.Size = new System.Drawing.Size(444, 45);
             this.txtTimKiem.TabIndex = 7;
             this.txtTimKiem.Text = "    Tìm kiếm";
             this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
@@ -419,6 +421,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.PTB_SP);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.txtGiaBan);
             this.groupBox1.Controls.Add(this.label7);
@@ -442,10 +445,20 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 16);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 16);
-            this.groupBox1.Size = new System.Drawing.Size(979, 274);
+            this.groupBox1.Size = new System.Drawing.Size(1165, 274);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
+            // 
+            // PTB_SP
+            // 
+            this.PTB_SP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PTB_SP.Location = new System.Drawing.Point(782, 22);
+            this.PTB_SP.Name = "PTB_SP";
+            this.PTB_SP.Size = new System.Drawing.Size(210, 230);
+            this.PTB_SP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PTB_SP.TabIndex = 27;
+            this.PTB_SP.TabStop = false;
             // 
             // btnAddNV
             // 
@@ -541,21 +554,22 @@
             this.btnTimkiem.BackColor = System.Drawing.Color.White;
             this.btnTimkiem.BackgroundColor = System.Drawing.Color.White;
             this.btnTimkiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTimkiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimkiem.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTimkiem.BorderRadius = 0;
-            this.btnTimkiem.BorderSize = 0;
+            this.btnTimkiem.BorderSize = 1;
             this.btnTimkiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTimkiem.FlatAppearance.BorderSize = 0;
             this.btnTimkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimkiem.ForeColor = System.Drawing.Color.Black;
             this.btnTimkiem.Image = global::QL_DT_LK.Properties.Resources.search__1_;
             this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimkiem.Location = new System.Drawing.Point(459, 210);
+            this.btnTimkiem.Location = new System.Drawing.Point(451, 207);
             this.btnTimkiem.Margin = new System.Windows.Forms.Padding(3, 12, 3, 2);
             this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(113, 25);
+            this.btnTimkiem.Size = new System.Drawing.Size(130, 45);
             this.btnTimkiem.TabIndex = 8;
-            this.btnTimkiem.Text = "  Tìm kiếm";
+            this.btnTimkiem.Text = "Tìm kiếm";
+            this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimkiem.TextColor = System.Drawing.Color.Black;
             this.btnTimkiem.UseVisualStyleBackColor = false;
             this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
@@ -564,7 +578,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 556);
+            this.ClientSize = new System.Drawing.Size(1165, 673);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -576,6 +590,7 @@
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_SP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -613,5 +628,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox PTB_SP;
     }
 }

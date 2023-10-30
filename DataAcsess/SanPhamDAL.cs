@@ -8,7 +8,7 @@ namespace QL_DT_LK.DataAcsess
 {
     public class SanPhamDAL
     {
-        QLPKDTEntities db = new QLPKDTEntities();
+        QLPKDTEntities1 db = new QLPKDTEntities1();
         public List<SanPham> GetListSP()
         {
             return db.SanPhams.ToList<SanPham>();

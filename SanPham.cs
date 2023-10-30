@@ -27,6 +27,7 @@ namespace QL_DT_LK
         public string XuatXu { get; set; }
         public Nullable<double> Giaban { get; set; }
         public string TheLoai { get; set; }
+        public string HinhAnh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }

@@ -8,7 +8,7 @@ namespace QL_DT_LK.DataAcsess
 {
     public class NhacungcapDAL
     {
-        QLPKDTEntities db = new QLPKDTEntities();
+        QLPKDTEntities1 db = new QLPKDTEntities1();
         public List<NhaCC> list()
         {
             return db.NhaCCs.ToList<NhaCC>();
