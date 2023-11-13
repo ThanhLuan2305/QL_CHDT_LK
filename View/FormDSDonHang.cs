@@ -13,7 +13,7 @@ namespace QL_DT_LK.View
 {
     public partial class FormDSDonHang : Form
     {
-        ThongkeDAL tk = new ThongkeDAL();
+        DSDonHangDAL tk = new DSDonHangDAL();
         public FormDSDonHang()
         {
             InitializeComponent();
@@ -128,11 +128,6 @@ namespace QL_DT_LK.View
         }
 
         private void dtgrvHienThiListALLDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

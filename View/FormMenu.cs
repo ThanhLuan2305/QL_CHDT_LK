@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using QL_DT_LK.View;
 
 namespace QL_DT_LK.View
@@ -71,6 +72,10 @@ namespace QL_DT_LK.View
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
+            FormDashboar a = new FormDashboar();
+            LoadForm(a);
+            ActiveColor(btnTrangchu);
+
             lblUserName.Text = FormLogin.GetDataUser.tentaikhoan;
             lblPhanQuyen.Text = FormLogin.GetDataUser.phanquyen;
             lbTenHinhAnh.Text = FormLogin.GetDataUser.tenAnh; 
@@ -83,10 +88,10 @@ namespace QL_DT_LK.View
             }
             ButtonNow = btnTrangchu;
             ButtonNow.ForeColor = Color.FromArgb(225, 82, 61);
-
-
-
         }
+
+        
+
 
         private void panelBody_Paint(object sender, PaintEventArgs e)
         {
@@ -140,20 +145,31 @@ namespace QL_DT_LK.View
 
         private void btnThongke_Click(object sender, EventArgs e)
         {
-            FormThongKe a = new FormThongKe();
+            FormDSDonHang a = new FormDSDonHang();
             LoadForm(a);
             ActiveColor(btnThongke);
         }
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
-            panel6.Controls.Clear();
+            FormDashboar a = new FormDashboar();
+            LoadForm(a);
             ActiveColor(btnTrangchu);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_MouseMove(object sender, MouseEventArgs e)
+        {
+           
         }
     }
 }

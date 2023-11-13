@@ -39,7 +39,6 @@ namespace QL_DT_LK.View
             listSP = ql.GetListSP().ToList();
             var ListSPNew = listSP.Select(p => new { p.MaSP, p.MaNCC, p.HangSP, p.TenSP, p.TheLoai, p.XuatXu, p.Giaban, p.HinhAnh }).ToList();
             return ListSPNew;
-
         }
         public void LoadDataGridView()
         {
@@ -53,12 +52,15 @@ namespace QL_DT_LK.View
         }
         public bool CheckTextBox()
         {
-            if (txtMaSP.Text != "" &&
+            if 
+            (
+                txtMaSP.Text != "" &&
                 cbbNCC.Text != "  Chọn nhà cung cấp" &&
-                 cbbHangSP.Text != "  Chọn hãng sản phẩm" &&
-                  cbbXuatxu.Text != "  Chọn xuất xứ" &&
-                  cbbTheloai.Text != "Chọn thể loại" &&
-                  txtGiaBan.Text != "")
+                cbbHangSP.Text != "  Chọn hãng sản phẩm" &&
+                cbbXuatxu.Text != "  Chọn xuất xứ" &&
+                cbbTheloai.Text != "Chọn thể loại" &&
+                txtGiaBan.Text != ""
+            )
             {
                 return true;
             }

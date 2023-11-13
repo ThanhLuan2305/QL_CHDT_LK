@@ -155,7 +155,7 @@
             this.btnThongke.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongke.Name = "btnThongke";
             this.btnThongke.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnThongke.Size = new System.Drawing.Size(147, 47);
+            this.btnThongke.Size = new System.Drawing.Size(165, 47);
             this.btnThongke.TabIndex = 10;
             this.btnThongke.Text = "    DS Đơn hàng";
             this.btnThongke.TextColor = System.Drawing.Color.White;

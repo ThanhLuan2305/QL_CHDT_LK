@@ -113,7 +113,7 @@
     <Compile Include="DataAcsess\NhanVienDAL.cs" />
     <Compile Include="DataAcsess\SanPhamDAL.cs" />
     <Compile Include="DataAcsess\TaiKhoanDAL.cs" />
-    <Compile Include="DataAcsess\ThongkeDAL.cs" />
+    <Compile Include="DataAcsess\DSDonHangDAL.cs" />
     <Compile Include="DonHang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -156,6 +156,12 @@
     <Compile Include="View\FormChiTietDH.Designer.cs">
       <DependentUpon>FormChiTietDH.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormDashboar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDashboar.Designer.cs">
+      <DependentUpon>FormDashboar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormDonhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,11 +174,11 @@
     <Compile Include="View\FormKhoHang.Designer.cs">
       <DependentUpon>FormKhoHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormThongKe.cs">
+    <Compile Include="View\FormDSDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormThongKe.Designer.cs">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
+    <Compile Include="View\FormDSDonHang.Designer.cs">
+      <DependentUpon>FormDSDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -237,14 +243,17 @@
     <EmbeddedResource Include="View\FormChiTietDH.resx">
       <DependentUpon>FormChiTietDH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDashboar.resx">
+      <DependentUpon>FormDashboar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDonhang.resx">
       <DependentUpon>FormDonhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormKhoHang.resx">
       <DependentUpon>FormKhoHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormThongKe.resx">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormDSDonHang.resx">
+      <DependentUpon>FormDSDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

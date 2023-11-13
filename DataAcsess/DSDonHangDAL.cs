@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace QL_DT_LK.DataAcsess
 {
-    public class ThongkeDAL
+    public class DSDonHangDAL
     {
         QLPKDTEntities1 db = new QLPKDTEntities1();
         public dynamic GetAllDonHang()
@@ -27,6 +28,25 @@ namespace QL_DT_LK.DataAcsess
 
             return returnKQ.ToList();
         }
+
+        public dynamic GetRecentDonHang()
+        {
+            var returnKQ = from dh in db.DonHangs
+                           join ctdh in db.ChiTietDonHangs on dh.MaDH equals ctdh.MaDH
+                           group new { dh, ctdh } by new { NgayMua = DbFunctions.TruncateTime(dh.NgayMua), dh.MaDH, dh.TenKH, dh.DiaChi, dh.MaNV } into g
+                           select new
+                           {
+                               g.Key.MaDH,
+                               g.Key.TenKH,
+                               g.Key.DiaChi,
+                               NgayMua = g.Key.NgayMua,
+                               g.Key.MaNV,
+                               tongtien = g.Sum(x => x.ctdh.DonGia)
+                           };
+
+            return returnKQ.ToList();
+        }
+
         public double SumDonGia()
         {
             return (double)db.ChiTietDonHangs.Sum(ctdh => ctdh.DonGia);
