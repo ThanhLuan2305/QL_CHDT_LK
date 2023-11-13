@@ -33,6 +33,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTenHinhAnh = new System.Windows.Forms.Label();
             this.PTB_Ava = new System.Windows.Forms.PictureBox();
+            this.btnNhacc = new CustomButton.VBButton();
+            this.btnThongke = new CustomButton.VBButton();
+            this.btnKhohang = new CustomButton.VBButton();
+            this.btnNhanvien = new CustomButton.VBButton();
+            this.btnAddDH = new CustomButton.VBButton();
+            this.btnLogout = new CustomButton.VBButton();
+            this.btnSanPham = new CustomButton.VBButton();
+            this.btnTrangchu = new CustomButton.VBButton();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lblPhanQuyen = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,18 +51,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnNhacc = new CustomButton.VBButton();
-            this.btnThongke = new CustomButton.VBButton();
-            this.btnKhohang = new CustomButton.VBButton();
-            this.btnNhanvien = new CustomButton.VBButton();
-            this.btnAddDH = new CustomButton.VBButton();
-            this.btnLogout = new CustomButton.VBButton();
-            this.btnSanPham = new CustomButton.VBButton();
-            this.btnTrangchu = new CustomButton.VBButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -110,136 +110,6 @@
             this.PTB_Ava.Size = new System.Drawing.Size(76, 82);
             this.PTB_Ava.TabIndex = 13;
             this.PTB_Ava.TabStop = false;
-            // 
-            // lblDateTime
-            // 
-            this.lblDateTime.AutoSize = true;
-            this.lblDateTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDateTime.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDateTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDateTime.Location = new System.Drawing.Point(787, 17);
-            this.lblDateTime.Margin = new System.Windows.Forms.Padding(2, 33, 2, 0);
-            this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(88, 13);
-            this.lblDateTime.TabIndex = 5;
-            this.lblDateTime.Text = "Thời gian hiện tại";
-            // 
-            // lblPhanQuyen
-            // 
-            this.lblPhanQuyen.AutoSize = true;
-            this.lblPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPhanQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblPhanQuyen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPhanQuyen.Location = new System.Drawing.Point(271, 20);
-            this.lblPhanQuyen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPhanQuyen.Name = "lblPhanQuyen";
-            this.lblPhanQuyen.Size = new System.Drawing.Size(103, 17);
-            this.lblPhanQuyen.TabIndex = 4;
-            this.lblPhanQuyen.Text = "không xác định";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(201, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Chức Vụ :";
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblUserName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUserName.Location = new System.Drawing.Point(83, 20);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(0, 17);
-            this.lblUserName.TabIndex = 1;
-            // 
-            // panel_Body
-            // 
-            this.panel_Body.AutoSize = true;
-            this.panel_Body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_Body.Location = new System.Drawing.Point(0, 578);
-            this.panel_Body.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(895, 0);
-            this.panel_Body.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.lblDateTime);
-            this.panel4.Controls.Add(this.lblPhanQuyen);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.lblUserName);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 17, 20, 0);
-            this.panel4.Size = new System.Drawing.Size(895, 49);
-            this.panel4.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(184, 49);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(883, 515);
-            this.panel5.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::QL_DT_LK.Properties.Resources.user;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(57, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(21, 23);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.panel_Body);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(178, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(895, 578);
-            this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel6
-            // 
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 49);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(895, 529);
-            this.panel6.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InfoText;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
-            this.dateTimePicker1.Location = new System.Drawing.Point(623, 8);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(178, 20);
-            this.dateTimePicker1.TabIndex = 4;
             // 
             // btnNhacc
             // 
@@ -450,6 +320,125 @@
             this.btnTrangchu.UseVisualStyleBackColor = false;
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
+            // lblDateTime
+            // 
+            this.lblDateTime.AutoSize = true;
+            this.lblDateTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDateTime.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblDateTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDateTime.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDateTime.Location = new System.Drawing.Point(787, 17);
+            this.lblDateTime.Margin = new System.Windows.Forms.Padding(2, 33, 2, 0);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(88, 13);
+            this.lblDateTime.TabIndex = 5;
+            this.lblDateTime.Text = "Thời gian hiện tại";
+            // 
+            // lblPhanQuyen
+            // 
+            this.lblPhanQuyen.AutoSize = true;
+            this.lblPhanQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPhanQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPhanQuyen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPhanQuyen.Location = new System.Drawing.Point(271, 20);
+            this.lblPhanQuyen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhanQuyen.Name = "lblPhanQuyen";
+            this.lblPhanQuyen.Size = new System.Drawing.Size(103, 17);
+            this.lblPhanQuyen.TabIndex = 4;
+            this.lblPhanQuyen.Text = "không xác định";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(201, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Chức Vụ :";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblUserName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUserName.Location = new System.Drawing.Point(83, 20);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(0, 17);
+            this.lblUserName.TabIndex = 1;
+            // 
+            // panel_Body
+            // 
+            this.panel_Body.AutoSize = true;
+            this.panel_Body.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_Body.Location = new System.Drawing.Point(0, 578);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(895, 0);
+            this.panel_Body.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.lblDateTime);
+            this.panel4.Controls.Add(this.lblPhanQuyen);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lblUserName);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(0, 17, 20, 0);
+            this.panel4.Size = new System.Drawing.Size(895, 49);
+            this.panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(184, 49);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(883, 515);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel_Body);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(178, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(895, 578);
+            this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 49);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(895, 529);
+            this.panel6.TabIndex = 2;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.InfoText;
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
+            this.dateTimePicker1.Location = new System.Drawing.Point(623, 8);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(178, 20);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,11 +455,11 @@
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).EndInit();
             this.ResumeLayout(false);
 
         }
