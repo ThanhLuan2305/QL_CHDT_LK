@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace QL_DT_LK.View
 {
-    public partial class FormThongKe : Form
+    public partial class FormDSDonHang : Form
     {
         ThongkeDAL tk = new ThongkeDAL();
-        public FormThongKe()
+        public FormDSDonHang()
         {
             InitializeComponent();
         }
@@ -125,6 +125,16 @@ namespace QL_DT_LK.View
         private void btnReset_Click(object sender, EventArgs e)
         {
             LoadDataGridView();
+        }
+
+        private void dtgrvHienThiListALLDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

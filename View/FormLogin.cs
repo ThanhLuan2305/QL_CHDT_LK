@@ -63,10 +63,13 @@ namespace QL_DT_LK.View
 
         }
 
+        WaitFormFunc waitForm = new WaitFormFunc();
+
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             try
             {
+                waitForm.Show(this);
                 if (txtUserName.Text == "" || txtPassWoud.Text == "")
                 {
                     MessageBox.Show("Thông tin tài khoản hoặc mật khẩu không được để trống !");
@@ -86,8 +89,9 @@ namespace QL_DT_LK.View
                             GetDataUser.phanquyen = tg.PhanQuyen;
                             GetDataUser.tenAnh = tg.HinhAnh;
                             this.Hide();
-                            a.ShowDialog();
+                            a.Show();
                             a.BringToFront();
+                            waitForm.Close();
                         }
                         else
                         {
@@ -97,13 +101,14 @@ namespace QL_DT_LK.View
                     }
                     else
                     {
-                        MessageBox.Show("Hiện không có tài khoản nào giống như quý khách đã cung cấp !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        MessageBox.Show("Tài khoản không tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     }
                 }
             }
             catch
             {
-                MessageBox.Show("Bạn cần xem lại các thao tác vừa làm !");
+                MessageBox.Show("Lỗi máy chủ!");
+                waitForm.Close();
             }
         }
 

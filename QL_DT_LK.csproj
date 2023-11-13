@@ -210,12 +210,19 @@
     <Compile Include="View\FormSanPham.Designer.cs">
       <DependentUpon>FormSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormWait.Designer.cs">
+      <DependentUpon>FormWait.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormXuatHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormXuatHoaDon.Designer.cs">
       <DependentUpon>FormXuatHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitFormFunc.cs" />
     <Compile Include="XuatExcel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -256,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormSanPham.resx">
       <DependentUpon>FormSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormWait.resx">
+      <DependentUpon>FormWait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormXuatHoaDon.resx">
       <DependentUpon>FormXuatHoaDon.cs</DependentUpon>
@@ -334,6 +344,7 @@
     <Content Include="Resources\search %281%293.png" />
     <Content Include="Resources\search.png" />
     <Content Include="Resources\shopping-cart.png" />
+    <None Include="Resources\Spinner-2.gif" />
     <Content Include="Resources\tim-mossholder-8FBTtjCZ9oM-unsplash.jpg" />
     <Content Include="Resources\trend.png" />
     <Content Include="Resources\turn-off.png" />

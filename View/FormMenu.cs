@@ -150,5 +150,10 @@ namespace QL_DT_LK.View
             panel6.Controls.Clear();
             ActiveColor(btnTrangchu);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
