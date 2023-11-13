@@ -153,6 +153,16 @@ namespace QL_DT_LK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list_order {
+            get {
+                object obj = ResourceManager.GetObject("list_order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap parrish_freeman_K2W8TIxcuko_unsplash {
             get {
                 object obj = ResourceManager.GetObject("parrish-freeman-K2W8TIxcuko-unsplash", resourceCulture);

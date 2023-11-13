@@ -32,7 +32,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTenHinhAnh = new System.Windows.Forms.Label();
-            this.PTB_Ava = new System.Windows.Forms.PictureBox();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lblPhanQuyen = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,10 +39,10 @@
             this.panel_Body = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.PTB_Ava = new System.Windows.Forms.PictureBox();
             this.btnNhacc = new CustomButton.VBButton();
             this.btnThongke = new CustomButton.VBButton();
             this.btnKhohang = new CustomButton.VBButton();
@@ -52,10 +51,11 @@
             this.btnLogout = new CustomButton.VBButton();
             this.btnSanPham = new CustomButton.VBButton();
             this.btnTrangchu = new CustomButton.VBButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -101,16 +101,6 @@
             this.lbTenHinhAnh.Name = "lbTenHinhAnh";
             this.lbTenHinhAnh.Size = new System.Drawing.Size(0, 17);
             this.lbTenHinhAnh.TabIndex = 14;
-            // 
-            // PTB_Ava
-            // 
-            this.PTB_Ava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PTB_Ava.Location = new System.Drawing.Point(10, 10);
-            this.PTB_Ava.Margin = new System.Windows.Forms.Padding(2);
-            this.PTB_Ava.Name = "PTB_Ava";
-            this.PTB_Ava.Size = new System.Drawing.Size(76, 82);
-            this.PTB_Ava.TabIndex = 13;
-            this.PTB_Ava.TabStop = false;
             // 
             // lblDateTime
             // 
@@ -199,16 +189,6 @@
             this.panel5.Size = new System.Drawing.Size(883, 515);
             this.panel5.TabIndex = 2;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::QL_DT_LK.Properties.Resources.user;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(57, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(21, 23);
-            this.panel3.TabIndex = 3;
-            // 
             // panel2
             // 
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -242,6 +222,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(178, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // PTB_Ava
+            // 
+            this.PTB_Ava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PTB_Ava.Location = new System.Drawing.Point(10, 10);
+            this.PTB_Ava.Margin = new System.Windows.Forms.Padding(2);
+            this.PTB_Ava.Name = "PTB_Ava";
+            this.PTB_Ava.Size = new System.Drawing.Size(76, 82);
+            this.PTB_Ava.TabIndex = 13;
+            this.PTB_Ava.TabStop = false;
+            // 
             // btnNhacc
             // 
             this.btnNhacc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -256,7 +246,7 @@
             this.btnNhacc.ForeColor = System.Drawing.Color.White;
             this.btnNhacc.Image = global::QL_DT_LK.Properties.Resources.agreement;
             this.btnNhacc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhacc.Location = new System.Drawing.Point(8, 223);
+            this.btnNhacc.Location = new System.Drawing.Point(5, 227);
             this.btnNhacc.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhacc.Name = "btnNhacc";
             this.btnNhacc.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -282,13 +272,13 @@
             this.btnThongke.ForeColor = System.Drawing.Color.White;
             this.btnThongke.Image = global::QL_DT_LK.Properties.Resources.trend;
             this.btnThongke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongke.Location = new System.Drawing.Point(8, 443);
+            this.btnThongke.Location = new System.Drawing.Point(5, 439);
             this.btnThongke.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongke.Name = "btnThongke";
             this.btnThongke.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnThongke.Size = new System.Drawing.Size(147, 47);
+            this.btnThongke.Size = new System.Drawing.Size(165, 47);
             this.btnThongke.TabIndex = 10;
-            this.btnThongke.Text = "    Thống kê";
+            this.btnThongke.Text = "    DS Đơn hàng";
             this.btnThongke.TextColor = System.Drawing.Color.White;
             this.btnThongke.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongke.UseVisualStyleBackColor = false;
@@ -308,7 +298,7 @@
             this.btnKhohang.ForeColor = System.Drawing.Color.White;
             this.btnKhohang.Image = global::QL_DT_LK.Properties.Resources.product;
             this.btnKhohang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhohang.Location = new System.Drawing.Point(10, 333);
+            this.btnKhohang.Location = new System.Drawing.Point(5, 333);
             this.btnKhohang.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhohang.Name = "btnKhohang";
             this.btnKhohang.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -334,7 +324,7 @@
             this.btnNhanvien.ForeColor = System.Drawing.Color.White;
             this.btnNhanvien.Image = global::QL_DT_LK.Properties.Resources.group;
             this.btnNhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanvien.Location = new System.Drawing.Point(10, 382);
+            this.btnNhanvien.Location = new System.Drawing.Point(5, 384);
             this.btnNhanvien.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhanvien.Name = "btnNhanvien";
             this.btnNhanvien.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -360,11 +350,11 @@
             this.btnAddDH.ForeColor = System.Drawing.Color.White;
             this.btnAddDH.Image = global::QL_DT_LK.Properties.Resources.shopping_cart;
             this.btnAddDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddDH.Location = new System.Drawing.Point(8, 275);
+            this.btnAddDH.Location = new System.Drawing.Point(2, 280);
             this.btnAddDH.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddDH.Name = "btnAddDH";
             this.btnAddDH.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnAddDH.Size = new System.Drawing.Size(169, 49);
+            this.btnAddDH.Size = new System.Drawing.Size(159, 49);
             this.btnAddDH.TabIndex = 3;
             this.btnAddDH.Text = "    Tạo đơn hàng";
             this.btnAddDH.TextColor = System.Drawing.Color.White;
@@ -413,7 +403,7 @@
             this.btnSanPham.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.Image = global::QL_DT_LK.Properties.Resources.usb__1_;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSanPham.Location = new System.Drawing.Point(8, 171);
+            this.btnSanPham.Location = new System.Drawing.Point(5, 180);
             this.btnSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -439,7 +429,7 @@
             this.btnTrangchu.ForeColor = System.Drawing.Color.White;
             this.btnTrangchu.Image = ((System.Drawing.Image)(resources.GetObject("btnTrangchu.Image")));
             this.btnTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrangchu.Location = new System.Drawing.Point(8, 118);
+            this.btnTrangchu.Location = new System.Drawing.Point(2, 134);
             this.btnTrangchu.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrangchu.Name = "btnTrangchu";
             this.btnTrangchu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -450,6 +440,16 @@
             this.btnTrangchu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTrangchu.UseVisualStyleBackColor = false;
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::QL_DT_LK.Properties.Resources.user;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(57, 17);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(21, 23);
+            this.panel3.TabIndex = 3;
             // 
             // FormMenu
             // 
@@ -467,11 +467,11 @@
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).EndInit();
             this.ResumeLayout(false);
 
         }

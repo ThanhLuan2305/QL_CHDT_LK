@@ -324,6 +324,7 @@
     <Content Include="Resources\home1.png" />
     <Content Include="Resources\images.png" />
     <Content Include="Resources\images1.png" />
+    <None Include="Resources\list_order.png" />
     <Content Include="Resources\logoUser.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\marek-piwnicki-aa0FiocaS48-unsplash.jpg" />
