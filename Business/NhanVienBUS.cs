@@ -57,6 +57,9 @@ namespace QL_DT_LK.Business
             }
 
         }
-
+        public NhanVien searchNV(string tk)
+        {
+            return NhanVienDAO.SearchNhanVien(tk);
+        }
     }
 }

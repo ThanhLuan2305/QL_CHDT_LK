@@ -17,7 +17,7 @@ namespace QL_DT_LK
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DonHang()
         {
-            this.ChiTietDonHangs = new HashSet<ChiTietDonHang>();
+            this.ChiTietDonHang = new HashSet<ChiTietDonHang>();
         }
     
         public string MaDH { get; set; }
@@ -28,7 +28,7 @@ namespace QL_DT_LK
         public string MaNV { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
+        public virtual ICollection<ChiTietDonHang> ChiTietDonHang { get; set; }
         public virtual NhanVien NhanVien { get; set; }
     }
 }

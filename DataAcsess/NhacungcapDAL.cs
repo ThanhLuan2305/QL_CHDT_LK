@@ -8,33 +8,33 @@ namespace QL_DT_LK.DataAcsess
 {
     public class NhacungcapDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public List<NhaCC> list()
         {
-            return db.NhaCCs.ToList<NhaCC>();
+            return db.NhaCC.ToList<NhaCC>();
         }
         public bool KiemTraKhoaNgoai(string maNCC)
         {
-            bool KetQua = db.SanPhams.Any(o => o.MaNCC == maNCC);
+            bool KetQua = db.SanPham.Any(o => o.MaNCC == maNCC);
             return KetQua;
         }
         public void Add(NhaCC nv)
         {
 
-            db.NhaCCs.Add(nv);
+            db.NhaCC.Add(nv);
             db.SaveChanges();
 
         }
         public void Delete(NhaCC nv)
         {
 
-            db.NhaCCs.Remove(nv);
+            db.NhaCC.Remove(nv);
             db.SaveChanges();
 
         }
         public void Replace(NhaCC NhaCCNew)
         {
-            NhaCC nccTG = db.NhaCCs.FirstOrDefault(p => p.MaNCC == NhaCCNew.MaNCC);
+            NhaCC nccTG = db.NhaCC.FirstOrDefault(p => p.MaNCC == NhaCCNew.MaNCC);
             if (nccTG != null)
             {
                 nccTG.MaNCC = NhaCCNew.MaNCC;
@@ -46,7 +46,7 @@ namespace QL_DT_LK.DataAcsess
         }
         public List<NhaCC> InsertNhaCC(string Keyword)
         {
-            List<NhaCC> listTG = db.NhaCCs.Where(s => s.MaNCC.Contains(Keyword) || s.TenNCC.Contains(Keyword) || s.Email.Contains(Keyword) || s.SDTLH.Contains(Keyword)).ToList();
+            List<NhaCC> listTG = db.NhaCC.Where(s => s.MaNCC.Contains(Keyword) || s.TenNCC.Contains(Keyword) || s.Email.Contains(Keyword) || s.SDTLH.Contains(Keyword)).ToList();
             return listTG;
         }
     }

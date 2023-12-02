@@ -8,25 +8,25 @@ namespace QL_DT_LK.DataAcsess
 {
     public class KhoHangDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public List<KhoHang> GetDataKhoHang()
         {
-            return db.KhoHangs.ToList<KhoHang>();
+            return db.KhoHang.ToList<KhoHang>();
         }
         public void AddSP(KhoHang sanpham)
         {
-            db.KhoHangs.Add(sanpham);
+            db.KhoHang.Add(sanpham);
             db.SaveChanges();
         }
         public void DeleteSP(KhoHang sanpham)
         {
-            db.KhoHangs.Remove(sanpham);
+            db.KhoHang.Remove(sanpham);
             db.SaveChanges();
 
         }
         public void UpdateSP(KhoHang sanphamnew)
         {
-            KhoHang sanphamOld = db.KhoHangs.FirstOrDefault(p => p.MaSP == sanphamnew.MaSP);
+            KhoHang sanphamOld = db.KhoHang.FirstOrDefault(p => p.MaSP == sanphamnew.MaSP);
             if (sanphamOld != null)
             {
                 sanphamOld.Soluong = sanphamnew.Soluong + sanphamOld.Soluong;

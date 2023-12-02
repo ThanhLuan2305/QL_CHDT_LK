@@ -9,55 +9,55 @@ namespace QL_DT_LK.DataAcsess
 {
     public class DonHangDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public List<DonHang> GetDonHangs()
         {
-            return db.DonHangs.ToList<DonHang>();
+            return db.DonHang.ToList<DonHang>();
         }
         public bool KiemTraKhoaNgoai(string maDH)
         {
-            bool KetQua = db.ChiTietDonHangs.Any(o => o.MaDH == maDH);
+            bool KetQua = db.ChiTietDonHang.Any(o => o.MaDH == maDH);
             return KetQua;
         }
         public DonHang GetThongTin1Donhang(string MaDH)
         {
-            DonHang DHTG = db.DonHangs.FirstOrDefault(s => s.MaDH == MaDH);
+            DonHang DHTG = db.DonHang.FirstOrDefault(s => s.MaDH == MaDH);
             return DHTG;
         }
 
         public void AddDH(DonHang dh)
         {
-            db.DonHangs.Add(dh);
+            db.DonHang.Add(dh);
             db.SaveChanges();
         }
         public void DeleteDH(DonHang dh)
         {
-            db.DonHangs.Remove(dh);
+            db.DonHang.Remove(dh);
             db.SaveChanges();
         }
 
         //Thao tác với Chitietdonhang
         public void AddCTDH(ChiTietDonHang dh)
         {
-            db.ChiTietDonHangs.Add(dh);
+            db.ChiTietDonHang.Add(dh);
             db.SaveChanges();
         }
         public void DeleteCTDH(string Madh)
         {
-            var ctdhList = db.ChiTietDonHangs.Where(ctdh => ctdh.MaDH == Madh).ToList();
-            db.ChiTietDonHangs.RemoveRange(ctdhList);
+            var ctdhList = db.ChiTietDonHang.Where(ctdh => ctdh.MaDH == Madh).ToList();
+            db.ChiTietDonHang.RemoveRange(ctdhList);
             db.SaveChanges();
         }
 
         public List<DonHang> GetDonHangss()
         {
-            return db.DonHangs.ToList<DonHang>();
+            return db.DonHang.ToList<DonHang>();
         }
 
         public List<ObjectSP> GetListSPmua(string MaDH)
             {
-            var Ketqua = from dhct in db.ChiTietDonHangs
-                         join sp in db.SanPhams on dhct.MaSP equals sp.MaSP
+            var Ketqua = from dhct in db.ChiTietDonHang
+                         join sp in db.SanPham on dhct.MaSP equals sp.MaSP
             where dhct.MaDH == MaDH
                          select new ObjectSP
                          {

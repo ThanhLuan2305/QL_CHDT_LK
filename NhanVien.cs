@@ -17,7 +17,7 @@ namespace QL_DT_LK
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVien()
         {
-            this.DonHangs = new HashSet<DonHang>();
+            this.DonHang = new HashSet<DonHang>();
         }
     
         public string MaNV { get; set; }
@@ -28,7 +28,7 @@ namespace QL_DT_LK
         public string Tentk { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DonHang> DonHangs { get; set; }
+        public virtual ICollection<DonHang> DonHang { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

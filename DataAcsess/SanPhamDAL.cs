@@ -8,29 +8,29 @@ namespace QL_DT_LK.DataAcsess
 {
     public class SanPhamDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public List<SanPham> GetListSP()
         {
-            return db.SanPhams.ToList<SanPham>();
+            return db.SanPham.ToList<SanPham>();
         }
         public bool KiemTraKhoaNgoai(string sanPhamId)
         {
-            bool KetQua = db.KhoHangs.Any(o => o.MaSP == sanPhamId) || db.ChiTietDonHangs.Any(o => o.MaSP == sanPhamId);
+            bool KetQua = db.KhoHang.Any(o => o.MaSP == sanPhamId) || db.ChiTietDonHang.Any(o => o.MaSP == sanPhamId);
             return KetQua;
         }
         public void Add(SanPham sp)
         {
-            db.SanPhams.Add(sp);
+            db.SanPham.Add(sp);
             db.SaveChanges();
         }
         public void Delete(SanPham sp)
         {
-            db.SanPhams.Remove(sp);
+            db.SanPham.Remove(sp);
             db.SaveChanges();
         }
         public void Replace(SanPham spnew)
         {
-            SanPham spOld = db.SanPhams.FirstOrDefault(s => s.MaSP == spnew.MaSP);
+            SanPham spOld = db.SanPham.FirstOrDefault(s => s.MaSP == spnew.MaSP);
             if (spOld != null)
             {
                 spOld.MaSP = spnew.MaSP;
@@ -45,7 +45,7 @@ namespace QL_DT_LK.DataAcsess
         }
         public List<SanPham> InsertSP(string Keyword)
         {
-            List<SanPham> Inserts = db.SanPhams.Where(s => s.MaSP.Contains(Keyword) || s.MaNCC.Contains(Keyword) || s.TenSP.Contains(Keyword) || s.XuatXu.Contains(Keyword) || s.HangSP.Contains(Keyword) || s.Giaban.ToString().Contains(Keyword)).ToList();
+            List<SanPham> Inserts = db.SanPham.Where(s => s.MaSP.Contains(Keyword) || s.MaNCC.Contains(Keyword) || s.TenSP.Contains(Keyword) || s.XuatXu.Contains(Keyword) || s.HangSP.Contains(Keyword) || s.Giaban.ToString().Contains(Keyword)).ToList();
             return Inserts;
         }
 

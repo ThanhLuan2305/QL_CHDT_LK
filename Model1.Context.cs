@@ -13,10 +13,10 @@ namespace QL_DT_LK
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLPKDTEntities1 : DbContext
+    public partial class QLPKDTEntities : DbContext
     {
-        public QLPKDTEntities1()
-            : base("name=QLPKDTEntities1")
+        public QLPKDTEntities()
+            : base("name=QLPKDTEntities")
         {
         }
     
@@ -25,12 +25,12 @@ namespace QL_DT_LK
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ChiTietDonHang> ChiTietDonHangs { get; set; }
-        public virtual DbSet<DonHang> DonHangs { get; set; }
-        public virtual DbSet<KhoHang> KhoHangs { get; set; }
-        public virtual DbSet<NhaCC> NhaCCs { get; set; }
-        public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<ChiTietDonHang> ChiTietDonHang { get; set; }
+        public virtual DbSet<DonHang> DonHang { get; set; }
+        public virtual DbSet<KhoHang> KhoHang { get; set; }
+        public virtual DbSet<NhaCC> NhaCC { get; set; }
+        public virtual DbSet<NhanVien> NhanVien { get; set; }
+        public virtual DbSet<SanPham> SanPham { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
     }
 }

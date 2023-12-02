@@ -17,7 +17,7 @@ namespace QL_DT_LK
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TaiKhoan()
         {
-            this.NhanViens = new HashSet<NhanVien>();
+            this.NhanVien = new HashSet<NhanVien>();
         }
     
         public string TaiKhoan1 { get; set; }
@@ -26,6 +26,6 @@ namespace QL_DT_LK
         public string HinhAnh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NhanVien> NhanViens { get; set; }
+        public virtual ICollection<NhanVien> NhanVien { get; set; }
     }
 }

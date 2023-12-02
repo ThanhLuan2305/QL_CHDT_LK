@@ -9,12 +9,12 @@ namespace QL_DT_LK.DataAcsess
 {
     public class DSDonHangDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public dynamic GetAllDonHang()
         {
 
-            var returnKQ = from dh in db.DonHangs
-                           join ctdh in db.ChiTietDonHangs on dh.MaDH equals ctdh.MaDH
+            var returnKQ = from dh in db.DonHang
+                           join ctdh in db.ChiTietDonHang on dh.MaDH equals ctdh.MaDH
                            group new { dh, ctdh } by new { dh.MaDH, dh.TenKH, dh.DiaChi, dh.NgayMua, dh.MaNV } into g
                            select new
                            {
@@ -31,8 +31,8 @@ namespace QL_DT_LK.DataAcsess
 
         public dynamic GetRecentDonHang()
         {
-            var returnKQ = from dh in db.DonHangs
-                           join ctdh in db.ChiTietDonHangs on dh.MaDH equals ctdh.MaDH
+            var returnKQ = from dh in db.DonHang
+                           join ctdh in db.ChiTietDonHang on dh.MaDH equals ctdh.MaDH
                            group new { dh, ctdh } by new { NgayMua = DbFunctions.TruncateTime(dh.NgayMua), dh.MaDH, dh.TenKH, dh.DiaChi, dh.MaNV } into g
                            select new
                            {
@@ -49,7 +49,7 @@ namespace QL_DT_LK.DataAcsess
 
         public double SumDonGia()
         {
-            return (double)db.ChiTietDonHangs.Sum(ctdh => ctdh.DonGia);
+            return (double)db.ChiTietDonHang.Sum(ctdh => ctdh.DonGia);
         }
         public dynamic Timkiem(string keyword)
         {
@@ -69,14 +69,14 @@ namespace QL_DT_LK.DataAcsess
         }
         public DonHang GetThongTin1Donhang(string MaDH)
         {
-            DonHang DHTG = db.DonHangs.FirstOrDefault(s => s.MaDH == MaDH);
+            DonHang DHTG = db.DonHang.FirstOrDefault(s => s.MaDH == MaDH);
             return DHTG;
         }
 
         public List<ObjectSP> GetListSPmua(string MaDH)
         {
-            var Ketqua = from dhct in db.ChiTietDonHangs
-                         join sp in db.SanPhams on dhct.MaSP equals sp.MaSP
+            var Ketqua = from dhct in db.ChiTietDonHang
+                         join sp in db.SanPham on dhct.MaSP equals sp.MaSP
                          where dhct.MaDH == MaDH
                          select new ObjectSP
                          {
