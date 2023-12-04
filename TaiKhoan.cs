@@ -19,6 +19,10 @@ namespace QL_DT_LK
         {
             this.NhanViens = new HashSet<NhanVien>();
             this.NhanViens1 = new HashSet<NhanVien>();
+            this.NhanViens2 = new HashSet<NhanVien>();
+            this.NhanViens3 = new HashSet<NhanVien>();
+            this.NhanViens4 = new HashSet<NhanVien>();
+            this.NhanViens5 = new HashSet<NhanVien>();
         }
     
         public string TaiKhoan1 { get; set; }
@@ -30,5 +34,13 @@ namespace QL_DT_LK
         public virtual ICollection<NhanVien> NhanViens { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NhanVien> NhanViens1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanViens2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanViens3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanViens4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NhanVien> NhanViens5 { get; set; }
     }
 }

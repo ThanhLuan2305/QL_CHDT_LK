@@ -18,36 +18,43 @@ namespace QL_DT_LK.View
         public FormDashboar()
         {
             InitializeComponent();
+            LoadDataGridView();
+        }
+
+        public void LoadDataGridView()
+        {
+            QLPKDTEntities db = new QLPKDTEntities();
+            dtgrvNhanVienDoanhThu.DataSource = db.GetEmployeeOrderStatistics().ToList();
         }
 
         private void FormDashboar_Load(object sender, EventArgs e)
         {
-            NhanVienBUS qlNhanVien = new NhanVienBUS();
             SanPhamBUS qlSanPham = new SanPhamBUS();
-            labelSumNhanVien.Text = qlNhanVien.GetListNV().Count.ToString();
             label2.Text = qlSanPham.GetListSP().Count.ToString();
             PopulateChart();
-        }
-
-        private void Query()
-        {
-           
         }
 
         private void PopulateChart()
         {
             DSDonHangDAL tk = new DSDonHangDAL();
 
-            var donHangData = tk.GetRecentDonHang();
+            var TonDonHang = tk.GetRecentDonHang();
 
-            label1.Text =(donHangData.Count).ToString();
+            label1.Text = (TonDonHang.Count).ToString();
+            QLPKDTEntities db = new QLPKDTEntities();
+            var donHangData = db.GetLast7DaysOrderTotal().ToList();
 
-            Series series = chart1.Series.Add("Đơn hàng được đặt");
+            chart1.Series.Clear();
+
+            Series series = chart1.Series.Add("Thu nhập");
             series.ChartType = SeriesChartType.Spline;
 
             for (int i = 0; i < donHangData.Count; i++)
             {
-                series.Points.AddXY(donHangData[i].NgayMua.ToShortDateString(), donHangData[i].tongtien);
+                if (donHangData[i].NgayMua != null && donHangData[i].TongTien != null)
+                {
+                    series.Points.AddXY(donHangData[i].NgayMua, donHangData[i].TongTien);
+                }
             }
 
             chart1.ChartAreas[0].AxisY.Minimum = 0;
@@ -56,14 +63,25 @@ namespace QL_DT_LK.View
             series.MarkerStyle = MarkerStyle.Circle;
             series.MarkerSize = 8;
 
-            chart1.ChartAreas[0].AxisX.CustomLabels.Clear();
-            for (int i = 0; i < donHangData.Count; i++)
-            {
-                chart1.ChartAreas[0].AxisX.CustomLabels.Add(i + 0.5, i + 1.5, donHangData[i].NgayMua.ToShortDateString());
-            }
+            chart1.Invalidate();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

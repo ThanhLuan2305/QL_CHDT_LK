@@ -19,6 +19,10 @@ namespace QL_DT_LK
         {
             this.DonHangs = new HashSet<DonHang>();
             this.DonHangs1 = new HashSet<DonHang>();
+            this.DonHangs2 = new HashSet<DonHang>();
+            this.DonHangs3 = new HashSet<DonHang>();
+            this.DonHangs4 = new HashSet<DonHang>();
+            this.DonHangs5 = new HashSet<DonHang>();
         }
     
         public string MaNV { get; set; }
@@ -32,7 +36,19 @@ namespace QL_DT_LK
         public virtual ICollection<DonHang> DonHangs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang> DonHangs1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang> DonHangs2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang> DonHangs3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang> DonHangs4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang> DonHangs5 { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
         public virtual TaiKhoan TaiKhoan1 { get; set; }
+        public virtual TaiKhoan TaiKhoan2 { get; set; }
+        public virtual TaiKhoan TaiKhoan3 { get; set; }
+        public virtual TaiKhoan TaiKhoan4 { get; set; }
+        public virtual TaiKhoan TaiKhoan5 { get; set; }
     }
 }

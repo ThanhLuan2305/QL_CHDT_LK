@@ -19,6 +19,10 @@ namespace QL_DT_LK
         {
             this.SanPhams = new HashSet<SanPham>();
             this.SanPhams1 = new HashSet<SanPham>();
+            this.SanPhams2 = new HashSet<SanPham>();
+            this.SanPhams3 = new HashSet<SanPham>();
+            this.SanPhams4 = new HashSet<SanPham>();
+            this.SanPhams5 = new HashSet<SanPham>();
         }
     
         public string MaNCC { get; set; }
@@ -30,5 +34,13 @@ namespace QL_DT_LK
         public virtual ICollection<SanPham> SanPhams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SanPham> SanPhams1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPhams2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPhams3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPhams4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPham> SanPhams5 { get; set; }
     }
 }

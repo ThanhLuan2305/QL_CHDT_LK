@@ -19,6 +19,10 @@ namespace QL_DT_LK
         {
             this.ChiTietDonHangs = new HashSet<ChiTietDonHang>();
             this.ChiTietDonHangs1 = new HashSet<ChiTietDonHang>();
+            this.ChiTietDonHangs2 = new HashSet<ChiTietDonHang>();
+            this.ChiTietDonHangs3 = new HashSet<ChiTietDonHang>();
+            this.ChiTietDonHangs4 = new HashSet<ChiTietDonHang>();
+            this.ChiTietDonHangs5 = new HashSet<ChiTietDonHang>();
         }
     
         public string MaSP { get; set; }
@@ -34,9 +38,25 @@ namespace QL_DT_LK
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs3 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs4 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs5 { get; set; }
         public virtual KhoHang KhoHang { get; set; }
         public virtual KhoHang KhoHang1 { get; set; }
+        public virtual KhoHang KhoHang2 { get; set; }
+        public virtual KhoHang KhoHang3 { get; set; }
+        public virtual KhoHang KhoHang4 { get; set; }
+        public virtual KhoHang KhoHang5 { get; set; }
         public virtual NhaCC NhaCC { get; set; }
         public virtual NhaCC NhaCC1 { get; set; }
+        public virtual NhaCC NhaCC2 { get; set; }
+        public virtual NhaCC NhaCC3 { get; set; }
+        public virtual NhaCC NhaCC4 { get; set; }
+        public virtual NhaCC NhaCC5 { get; set; }
     }
 }

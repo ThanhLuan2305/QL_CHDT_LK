@@ -297,3 +297,79 @@ USE [master]
 GO
 ALTER DATABASE [QLPKDT] SET  READ_WRITE 
 GO
+
+CREATE PROCEDURE GetLast7DaysOrderTotal
+AS
+BEGIN
+    SELECT 
+        CONVERT(date, dh.NgayMua) AS NgayMua,
+        SUM(ctdh.DonGia) AS TongTien
+    FROM 
+        DonHang dh
+    JOIN 
+        ChiTietDonHang ctdh ON dh.MaDH = ctdh.MaDH
+    WHERE 
+        dh.NgayMua >= DATEADD(day, -6, GETDATE()) -- Lấy đơn hàng trong 7 ngày gần đây
+    GROUP BY 
+        CONVERT(date, dh.NgayMua)
+    ORDER BY 
+        CONVERT(date, dh.NgayMua) DESC;
+END;
+
+
+
+
+SELECT 
+    CONVERT(date, NgayMua) AS NgayMua,
+    SUM(ctdh.DonGia) AS TongTien
+FROM 
+    DonHang dh
+JOIN 
+    ChiTietDonHang ctdh ON dh.MaDH = ctdh.MaDH
+WHERE 
+    NgayMua >= DATEADD(day, -6, GETDATE()) -- Lấy đơn hàng trong 7 ngày gần đây
+GROUP BY 
+    CONVERT(date, NgayMua)
+ORDER BY 
+    CONVERT(date, NgayMua) DESC;
+
+
+SELECT 
+    nv.TenNV,
+    COUNT(dh.MaDH) AS SoLuongDonHang,
+    SUM(ctdh.DonGia) AS DoanhThu
+FROM 
+    NhanVien nv
+LEFT JOIN 
+    DonHang dh ON nv.MaNV = dh.MaNV
+LEFT JOIN 
+    ChiTietDonHang ctdh ON dh.MaDH = ctdh.MaDH
+GROUP BY 
+    nv.TenNV;
+
+
+
+go
+
+DROP PROCEDURE GetEmployeeOrderStatistics
+
+CREATE PROCEDURE GetEmployeeOrderStatistics
+AS
+BEGIN
+    SELECT  TOP 4
+        nv.TenNV,
+        COUNT(dh.MaDH) AS SoLuongDonHang,
+        SUM(ctdh.DonGia) AS DoanhThu
+    FROM 
+        NhanVien nv
+    LEFT JOIN 
+        DonHang dh ON nv.MaNV = dh.MaNV
+    LEFT JOIN 
+        ChiTietDonHang ctdh ON dh.MaDH = ctdh.MaDH
+    GROUP BY 
+        nv.TenNV
+	ORDER BY
+        COUNT(dh.MaDH) DESC;
+END;
+
+EXEC GetEmployeeOrderStatistics;

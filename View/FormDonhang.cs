@@ -49,7 +49,8 @@ namespace QL_DT_LK.View
                 dhnew.SDTKH = txtSDTKH.Text;
                 dhnew.DiaChi = txtDiaChi.Text;
                 dhnew.MaNV = cboMaNV.Text;
-                dhnew.NgayMua = dateTimePicker1.Value;
+                DateTime currentTime = DateTime.Now;
+                dhnew.NgayMua = currentTime;
                 return dhnew;
             }
             else

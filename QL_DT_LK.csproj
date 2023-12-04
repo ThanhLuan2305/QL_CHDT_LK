@@ -118,6 +118,12 @@
       <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="GenerateRandomString.cs" />
+    <Compile Include="GetEmployeeOrderStatistics_Result.cs">
+      <DependentUpon>QLPKDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetLast7DaysOrderTotal_Result.cs">
+      <DependentUpon>QLPKDT.tt</DependentUpon>
+    </Compile>
     <Compile Include="KhoHang.cs">
       <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
