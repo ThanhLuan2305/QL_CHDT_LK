@@ -33,7 +33,7 @@ namespace QL_DT_LK.View
 
         public bool CheckTextBox()
         {
-            if (txtMaNV.Text != "" && txtName.Text != "" && txtSDT.Text != "" && txtQueQuan.Text != "" && txtEmail.Text != "" && txtTaiKhoan.Text != "" && txtMatKhau.Text != "")
+            if (txtName.Text != "" && txtSDT.Text != "" && txtQueQuan.Text != "" && txtEmail.Text != "" && txtTaiKhoan.Text != "" && txtMatKhau.Text != "")
             {
                 return true;
             }
@@ -58,7 +58,15 @@ namespace QL_DT_LK.View
             NhanVien nv = new NhanVien();
             if (CheckTextBox())
             {
-                nv.MaNV = txtMaNV.Text;
+                if (!string.IsNullOrEmpty(txtMaNV.Text))
+                {
+                    nv.MaNV = txtMaNV.Text;
+                }
+                else
+                {
+                    GenerateRandomString ramdom = new GenerateRandomString();
+                    nv.MaNV = ramdom.RandomString(5);
+                }
                 nv.TenNV = txtName.Text;
                 nv.SDT = txtSDT.Text;
                 nv.QueQuan = txtQueQuan.Text;
@@ -79,6 +87,7 @@ namespace QL_DT_LK.View
             NhanVien nv = new NhanVien();
             if (CheckTextBox2())
             {
+                
                 nv.MaNV = txtMaNV.Text;
                 nv.TenNV = txtName.Text;
                 nv.SDT = txtSDT.Text;

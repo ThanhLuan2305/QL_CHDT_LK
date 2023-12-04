@@ -18,6 +18,7 @@ namespace QL_DT_LK
         public NhanVien()
         {
             this.DonHangs = new HashSet<DonHang>();
+            this.DonHangs1 = new HashSet<DonHang>();
         }
     
         public string MaNV { get; set; }
@@ -29,6 +30,9 @@ namespace QL_DT_LK
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang> DonHangs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DonHang> DonHangs1 { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
+        public virtual TaiKhoan TaiKhoan1 { get; set; }
     }
 }

@@ -20,5 +20,6 @@ namespace QL_DT_LK
         public string TenSP { get; set; }
     
         public virtual SanPham SanPham { get; set; }
+        public virtual SanPham SanPham1 { get; set; }
     }
 }

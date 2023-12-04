@@ -102,7 +102,7 @@
     <Compile Include="Business\SanPhamBUS.cs" />
     <Compile Include="Business\TaiKhoanBUS.cs" />
     <Compile Include="ChiTietDonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="Custom_Button.cs">
       <SubType>Component</SubType>
@@ -115,40 +115,41 @@
     <Compile Include="DataAcsess\TaiKhoanDAL.cs" />
     <Compile Include="DataAcsess\DSDonHangDAL.cs" />
     <Compile Include="DonHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="GenerateRandomString.cs" />
     <Compile Include="KhoHang.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="NhaCC.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="NhanVien.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="ObjectSP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLPKDT.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPKDT.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLPKDT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLPKDT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPKDT.edmx</DependentUpon>
+    </Compile>
     <Compile Include="SanPham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
     <Compile Include="View\FormChiTietDH.cs">
       <SubType>Form</SubType>
@@ -279,13 +280,6 @@
     <EmbeddedResource Include="View\FormXuatHoaDon.resx">
       <DependentUpon>FormXuatHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -302,17 +296,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="Model1.Context.tt">
+    <Content Include="QLPKDT.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>QLPKDT.edmx</DependentUpon>
+      <LastGenOutput>QLPKDT.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="QLPKDT.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>QLPKDT.edmx</DependentUpon>
+      <LastGenOutput>QLPKDT.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\add-user.png" />
+    <EntityDeploy Include="QLPKDT.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLPKDT.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLPKDT.edmx.diagram">
+      <DependentUpon>QLPKDT.edmx</DependentUpon>
+    </None>
     <None Include="Resources\additional-plus-icon-vector.jpg" />
     <Content Include="Resources\agreement.png" />
     <Content Include="Resources\cach-ve-bieu-do-tron-trong-word-2-800x450.png" />

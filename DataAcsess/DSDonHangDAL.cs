@@ -9,7 +9,7 @@ namespace QL_DT_LK.DataAcsess
 {
     public class DSDonHangDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public dynamic GetAllDonHang()
         {
 

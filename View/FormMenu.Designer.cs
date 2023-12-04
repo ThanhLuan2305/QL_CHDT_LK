@@ -51,6 +51,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PTB_Ava)).BeginInit();
             this.panel4.SuspendLayout();
@@ -104,7 +105,7 @@
             // PTB_Ava
             // 
             this.PTB_Ava.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PTB_Ava.Location = new System.Drawing.Point(10, 10);
+            this.PTB_Ava.Location = new System.Drawing.Point(14, 11);
             this.PTB_Ava.Margin = new System.Windows.Forms.Padding(2);
             this.PTB_Ava.Name = "PTB_Ava";
             this.PTB_Ava.Size = new System.Drawing.Size(76, 82);
@@ -386,6 +387,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.lblDateTime);
             this.panel4.Controls.Add(this.lblPhanQuyen);
@@ -439,6 +441,18 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(178, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(11, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tài khoản: ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,5 +502,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox PTB_Ava;
         private System.Windows.Forms.Label lbTenHinhAnh;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -133,6 +133,7 @@ namespace QL_DT_LK.View
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
+            GenerateRandomString ramdom = new GenerateRandomString();
             try
             {
 
@@ -140,6 +141,11 @@ namespace QL_DT_LK.View
                 {
                     if (LaydulieuSP(txtSoluong.Text) != null)
                     {
+                        
+                        if (string.IsNullOrEmpty(txtMaDH.Text))
+                        {
+                            txtMaDH.Text = ramdom.RandomString(5);
+                        }
                         if (txtMaDH.Text != "")
 
                         {
@@ -249,8 +255,6 @@ namespace QL_DT_LK.View
                             foreach (var i in listAllCTDH)
                             {
                                 qlkh.TangSoLuongQL(i.MaSP, (int)i.Soluong);
-
-
                             }
                             MessageBox.Show("Xóa đơn hàng thành công !", "Thông báo", MessageBoxButtons.OK);
                         }

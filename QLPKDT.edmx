@@ -89,189 +89,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ChiTietDon__MaSP__440B1D61">
-          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
-          <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="SanPham">
-              <PropertyRef Name="MaSP" />
-            </Principal>
-            <Dependent Role="ChiTietDonHang">
-              <PropertyRef Name="MaSP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__DonHang__MaNV__44FF419A">
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
-          <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="MaNV" />
-            </Principal>
-            <Dependent Role="DonHang">
-              <PropertyRef Name="MaNV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__KhoHang__MaSP__45F365D3">
-          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
-          <End Role="KhoHang" Type="Self.KhoHang" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="SanPham">
-              <PropertyRef Name="MaSP" />
-            </Principal>
-            <Dependent Role="KhoHang">
-              <PropertyRef Name="MaSP" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__NhanVien__Tentk__46E78A0C">
-          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
-          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaiKhoan">
-              <PropertyRef Name="TaiKhoan" />
-            </Principal>
-            <Dependent Role="NhanVien">
-              <PropertyRef Name="Tentk" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__SanPham__MaNCC__47DBAE45">
-          <End Role="NhaCC" Type="Self.NhaCC" Multiplicity="0..1" />
-          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhaCC">
-              <PropertyRef Name="MaNCC" />
-            </Principal>
-            <Dependent Role="SanPham">
-              <PropertyRef Name="MaNCC" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="QLPKDTModelStoreContainer">
-          <EntitySet Name="ChiTietDonHang" EntityType="Self.ChiTietDonHang" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="KhoHang" EntityType="Self.KhoHang" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="NhaCC" EntityType="Self.NhaCC" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__ChiTietDon__MaDH__4316F928" Association="Self.FK__ChiTietDon__MaDH__4316F928">
-            <End Role="DonHang" EntitySet="DonHang" />
-            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ChiTietDon__MaSP__440B1D61" Association="Self.FK__ChiTietDon__MaSP__440B1D61">
-            <End Role="SanPham" EntitySet="SanPham" />
-            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
-          </AssociationSet>
-          <AssociationSet Name="FK__DonHang__MaNV__44FF419A" Association="Self.FK__DonHang__MaNV__44FF419A">
-            <End Role="NhanVien" EntitySet="NhanVien" />
-            <End Role="DonHang" EntitySet="DonHang" />
-          </AssociationSet>
-          <AssociationSet Name="FK__KhoHang__MaSP__45F365D3" Association="Self.FK__KhoHang__MaSP__45F365D3">
-            <End Role="SanPham" EntitySet="SanPham" />
-            <End Role="KhoHang" EntitySet="KhoHang" />
-          </AssociationSet>
-          <AssociationSet Name="FK__NhanVien__Tentk__46E78A0C" Association="Self.FK__NhanVien__Tentk__46E78A0C">
-            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
-            <End Role="NhanVien" EntitySet="NhanVien" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SanPham__MaNCC__47DBAE45" Association="Self.FK__SanPham__MaNCC__47DBAE45">
-            <End Role="NhaCC" EntitySet="NhaCC" />
-            <End Role="SanPham" EntitySet="SanPham" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="QLPKDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="ChiTietDonHang">
-          <Key>
-            <PropertyRef Name="MaCTDH" />
-          </Key>
-          <Property Name="MaCTDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaDH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="MaSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="SoLuong" Type="Int32" />
-          <Property Name="DonGia" Type="Double" />
-          <NavigationProperty Name="DonHang" Relationship="Self.FK__ChiTietDon__MaDH__4316F928" FromRole="ChiTietDonHang" ToRole="DonHang" />
-          <NavigationProperty Name="SanPham" Relationship="Self.FK__ChiTietDon__MaSP__440B1D61" FromRole="ChiTietDonHang" ToRole="SanPham" />
-        </EntityType>
-        <EntityType Name="DonHang">
-          <Key>
-            <PropertyRef Name="MaDH" />
-          </Key>
-          <Property Name="MaDH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SDTKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NgayMua" Type="DateTime" Precision="3" />
-          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK__ChiTietDon__MaDH__4316F928" FromRole="DonHang" ToRole="ChiTietDonHang" />
-          <NavigationProperty Name="NhanVien" Relationship="Self.FK__DonHang__MaNV__44FF419A" FromRole="DonHang" ToRole="NhanVien" />
-        </EntityType>
-        <EntityType Name="KhoHang">
-          <Key>
-            <PropertyRef Name="MaSP" />
-          </Key>
-          <Property Name="MaSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Soluong" Type="Int32" />
-          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
-          <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SanPham" Relationship="Self.FK__KhoHang__MaSP__45F365D3" FromRole="KhoHang" ToRole="SanPham" />
-        </EntityType>
-        <EntityType Name="NhaCC">
-          <Key>
-            <PropertyRef Name="MaNCC" />
-          </Key>
-          <Property Name="MaNCC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SDTLH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__MaNCC__47DBAE45" FromRole="NhaCC" ToRole="SanPham" />
-        </EntityType>
-        <EntityType Name="NhanVien">
-          <Key>
-            <PropertyRef Name="MaNV" />
-          </Key>
-          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Tentk" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DonHangs" Relationship="Self.FK__DonHang__MaNV__44FF419A" FromRole="NhanVien" ToRole="DonHang" />
-          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__NhanVien__Tentk__46E78A0C" FromRole="NhanVien" ToRole="TaiKhoan" />
-        </EntityType>
-        <EntityType Name="SanPham">
-          <Key>
-            <PropertyRef Name="MaSP" />
-          </Key>
-          <Property Name="MaSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaNCC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HangSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="XuatXu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Giaban" Type="Double" />
-          <Property Name="TheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK__ChiTietDon__MaSP__440B1D61" FromRole="SanPham" ToRole="ChiTietDonHang" />
-          <NavigationProperty Name="KhoHang" Relationship="Self.FK__KhoHang__MaSP__45F365D3" FromRole="SanPham" ToRole="KhoHang" />
-          <NavigationProperty Name="NhaCC" Relationship="Self.FK__SanPham__MaNCC__47DBAE45" FromRole="SanPham" ToRole="NhaCC" />
-        </EntityType>
-        <EntityType Name="TaiKhoan">
-          <Key>
-            <PropertyRef Name="TaiKhoan1" />
-          </Key>
-          <Property Name="TaiKhoan1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="PhanQuyen" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="HinhAnh" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__Tentk__46E78A0C" FromRole="TaiKhoan" ToRole="NhanVien" />
-        </EntityType>
-        <Association Name="FK__ChiTietDon__MaDH__4316F928">
+        <Association Name="FK__ChiTietDon__MaDH__619B8048">
           <End Role="DonHang" Type="Self.DonHang" Multiplicity="0..1" />
           <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
           <ReferentialConstraint>
@@ -295,7 +113,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__ChiTietDon__MaSP__628FA481">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__DonHang__MaNV__44FF419A">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="DonHang">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonHang__MaNV__6383C8BA">
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
           <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
           <ReferentialConstraint>
@@ -319,7 +161,333 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__KhoHang__MaSP__6477ECF3">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="KhoHang" Type="Self.KhoHang" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="KhoHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NhanVien__Tentk__46E78A0C">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TaiKhoan" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="Tentk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NhanVien__Tentk__656C112C">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TaiKhoan" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="Tentk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__SanPham__MaNCC__47DBAE45">
+          <End Role="NhaCC" Type="Self.NhaCC" Multiplicity="0..1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaCC">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaNCC__66603565">
+          <End Role="NhaCC" Type="Self.NhaCC" Multiplicity="0..1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaCC">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLPKDTModelStoreContainer">
+          <EntitySet Name="ChiTietDonHang" EntityType="Self.ChiTietDonHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KhoHang" EntityType="Self.KhoHang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhaCC" EntityType="Self.NhaCC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ChiTietDon__MaDH__4316F928" Association="Self.FK__ChiTietDon__MaDH__4316F928">
+            <End Role="DonHang" EntitySet="DonHang" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaDH__619B8048" Association="Self.FK__ChiTietDon__MaDH__619B8048">
+            <End Role="DonHang" EntitySet="DonHang" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaSP__440B1D61" Association="Self.FK__ChiTietDon__MaSP__440B1D61">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaSP__628FA481" Association="Self.FK__ChiTietDon__MaSP__628FA481">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonHang__MaNV__44FF419A" Association="Self.FK__DonHang__MaNV__44FF419A">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="DonHang" EntitySet="DonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DonHang__MaNV__6383C8BA" Association="Self.FK__DonHang__MaNV__6383C8BA">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="DonHang" EntitySet="DonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__KhoHang__MaSP__45F365D3" Association="Self.FK__KhoHang__MaSP__45F365D3">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="KhoHang" EntitySet="KhoHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__KhoHang__MaSP__6477ECF3" Association="Self.FK__KhoHang__MaSP__6477ECF3">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="KhoHang" EntitySet="KhoHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NhanVien__Tentk__46E78A0C" Association="Self.FK__NhanVien__Tentk__46E78A0C">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NhanVien__Tentk__656C112C" Association="Self.FK__NhanVien__Tentk__656C112C">
+            <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+            <End Role="NhanVien" EntitySet="NhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaNCC__47DBAE45" Association="Self.FK__SanPham__MaNCC__47DBAE45">
+            <End Role="NhaCC" EntitySet="NhaCC" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaNCC__66603565" Association="Self.FK__SanPham__MaNCC__66603565">
+            <End Role="NhaCC" EntitySet="NhaCC" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLPKDTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ChiTietDonHang">
+          <Key>
+            <PropertyRef Name="MaCTDH" />
+          </Key>
+          <Property Name="MaCTDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaDH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MaSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="DonGia" Type="Double" />
+          <NavigationProperty Name="DonHang" Relationship="Self.FK__ChiTietDon__MaDH__4316F928" FromRole="ChiTietDonHang" ToRole="DonHang" />
+          <NavigationProperty Name="DonHang1" Relationship="Self.FK__ChiTietDon__MaDH__619B8048" FromRole="ChiTietDonHang" ToRole="DonHang" />
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__ChiTietDon__MaSP__440B1D61" FromRole="ChiTietDonHang" ToRole="SanPham" />
+          <NavigationProperty Name="SanPham1" Relationship="Self.FK__ChiTietDon__MaSP__628FA481" FromRole="ChiTietDonHang" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="DonHang">
+          <Key>
+            <PropertyRef Name="MaDH" />
+          </Key>
+          <Property Name="MaDH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDTKH" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgayMua" Type="DateTime" Precision="3" />
+          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK__ChiTietDon__MaDH__4316F928" FromRole="DonHang" ToRole="ChiTietDonHang" />
+          <NavigationProperty Name="ChiTietDonHangs1" Relationship="Self.FK__ChiTietDon__MaDH__619B8048" FromRole="DonHang" ToRole="ChiTietDonHang" />
+          <NavigationProperty Name="NhanVien" Relationship="Self.FK__DonHang__MaNV__44FF419A" FromRole="DonHang" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanVien1" Relationship="Self.FK__DonHang__MaNV__6383C8BA" FromRole="DonHang" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="KhoHang">
+          <Key>
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Soluong" Type="Int32" />
+          <Property Name="NgayNhap" Type="DateTime" Precision="0" />
+          <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPham" Relationship="Self.FK__KhoHang__MaSP__45F365D3" FromRole="KhoHang" ToRole="SanPham" />
+          <NavigationProperty Name="SanPham1" Relationship="Self.FK__KhoHang__MaSP__6477ECF3" FromRole="KhoHang" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="NhaCC">
+          <Key>
+            <PropertyRef Name="MaNCC" />
+          </Key>
+          <Property Name="MaNCC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDTLH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPhams" Relationship="Self.FK__SanPham__MaNCC__47DBAE45" FromRole="NhaCC" ToRole="SanPham" />
+          <NavigationProperty Name="SanPhams1" Relationship="Self.FK__SanPham__MaNCC__66603565" FromRole="NhaCC" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="NhanVien">
+          <Key>
+            <PropertyRef Name="MaNV" />
+          </Key>
+          <Property Name="MaNV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tentk" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DonHangs" Relationship="Self.FK__DonHang__MaNV__44FF419A" FromRole="NhanVien" ToRole="DonHang" />
+          <NavigationProperty Name="DonHangs1" Relationship="Self.FK__DonHang__MaNV__6383C8BA" FromRole="NhanVien" ToRole="DonHang" />
+          <NavigationProperty Name="TaiKhoan" Relationship="Self.FK__NhanVien__Tentk__46E78A0C" FromRole="NhanVien" ToRole="TaiKhoan" />
+          <NavigationProperty Name="TaiKhoan1" Relationship="Self.FK__NhanVien__Tentk__656C112C" FromRole="NhanVien" ToRole="TaiKhoan" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaSP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MaNCC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HangSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="XuatXu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Giaban" Type="Double" />
+          <Property Name="TheLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ChiTietDonHangs" Relationship="Self.FK__ChiTietDon__MaSP__440B1D61" FromRole="SanPham" ToRole="ChiTietDonHang" />
+          <NavigationProperty Name="ChiTietDonHangs1" Relationship="Self.FK__ChiTietDon__MaSP__628FA481" FromRole="SanPham" ToRole="ChiTietDonHang" />
+          <NavigationProperty Name="KhoHang" Relationship="Self.FK__KhoHang__MaSP__45F365D3" FromRole="SanPham" ToRole="KhoHang" />
+          <NavigationProperty Name="KhoHang1" Relationship="Self.FK__KhoHang__MaSP__6477ECF3" FromRole="SanPham" ToRole="KhoHang" />
+          <NavigationProperty Name="NhaCC" Relationship="Self.FK__SanPham__MaNCC__47DBAE45" FromRole="SanPham" ToRole="NhaCC" />
+          <NavigationProperty Name="NhaCC1" Relationship="Self.FK__SanPham__MaNCC__66603565" FromRole="SanPham" ToRole="NhaCC" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="TaiKhoan1" />
+          </Key>
+          <Property Name="TaiKhoan1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PhanQuyen" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HinhAnh" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__Tentk__46E78A0C" FromRole="TaiKhoan" ToRole="NhanVien" />
+          <NavigationProperty Name="NhanViens1" Relationship="Self.FK__NhanVien__Tentk__656C112C" FromRole="TaiKhoan" ToRole="NhanVien" />
+        </EntityType>
+        <Association Name="FK__ChiTietDon__MaDH__4316F928">
+          <End Role="DonHang" Type="Self.DonHang" Multiplicity="0..1" />
+          <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DonHang">
+              <PropertyRef Name="MaDH" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDon__MaDH__619B8048">
+          <End Role="DonHang" Type="Self.DonHang" Multiplicity="0..1" />
+          <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DonHang">
+              <PropertyRef Name="MaDH" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDon__MaSP__440B1D61">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ChiTietDon__MaSP__628FA481">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="ChiTietDonHang" Type="Self.ChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="ChiTietDonHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonHang__MaNV__44FF419A">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="DonHang">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DonHang__MaNV__6383C8BA">
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+          <End Role="DonHang" Type="Self.DonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNV" />
+            </Principal>
+            <Dependent Role="DonHang">
+              <PropertyRef Name="MaNV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__KhoHang__MaSP__45F365D3">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="KhoHang" Type="Self.KhoHang" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="KhoHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__KhoHang__MaSP__6477ECF3">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="KhoHang" Type="Self.KhoHang" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="MaSP" />
+            </Principal>
+            <Dependent Role="KhoHang">
+              <PropertyRef Name="MaSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaNCC__47DBAE45">
+          <End Role="NhaCC" Type="Self.NhaCC" Multiplicity="0..1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhaCC">
+              <PropertyRef Name="MaNCC" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="MaNCC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SanPham__MaNCC__66603565">
           <End Role="NhaCC" Type="Self.NhaCC" Multiplicity="0..1" />
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
           <ReferentialConstraint>
@@ -343,7 +511,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QLPKDTEntities1" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK__NhanVien__Tentk__656C112C">
+          <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+          <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaiKhoan">
+              <PropertyRef Name="TaiKhoan1" />
+            </Principal>
+            <Dependent Role="NhanVien">
+              <PropertyRef Name="Tentk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLPKDTEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChiTietDonHangs" EntityType="Self.ChiTietDonHang" />
           <EntitySet Name="DonHangs" EntityType="Self.DonHang" />
           <EntitySet Name="KhoHangs" EntityType="Self.KhoHang" />
@@ -355,7 +535,15 @@
             <End Role="DonHang" EntitySet="DonHangs" />
             <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
           </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaDH__619B8048" Association="Self.FK__ChiTietDon__MaDH__619B8048">
+            <End Role="DonHang" EntitySet="DonHangs" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+          </AssociationSet>
           <AssociationSet Name="FK__ChiTietDon__MaSP__440B1D61" Association="Self.FK__ChiTietDon__MaSP__440B1D61">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ChiTietDon__MaSP__628FA481" Association="Self.FK__ChiTietDon__MaSP__628FA481">
             <End Role="SanPham" EntitySet="SanPhams" />
             <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
           </AssociationSet>
@@ -363,7 +551,15 @@
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="DonHang" EntitySet="DonHangs" />
           </AssociationSet>
+          <AssociationSet Name="FK__DonHang__MaNV__6383C8BA" Association="Self.FK__DonHang__MaNV__6383C8BA">
+            <End Role="NhanVien" EntitySet="NhanViens" />
+            <End Role="DonHang" EntitySet="DonHangs" />
+          </AssociationSet>
           <AssociationSet Name="FK__KhoHang__MaSP__45F365D3" Association="Self.FK__KhoHang__MaSP__45F365D3">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="KhoHang" EntitySet="KhoHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__KhoHang__MaSP__6477ECF3" Association="Self.FK__KhoHang__MaSP__6477ECF3">
             <End Role="SanPham" EntitySet="SanPhams" />
             <End Role="KhoHang" EntitySet="KhoHangs" />
           </AssociationSet>
@@ -371,7 +567,15 @@
             <End Role="NhaCC" EntitySet="NhaCCs" />
             <End Role="SanPham" EntitySet="SanPhams" />
           </AssociationSet>
+          <AssociationSet Name="FK__SanPham__MaNCC__66603565" Association="Self.FK__SanPham__MaNCC__66603565">
+            <End Role="NhaCC" EntitySet="NhaCCs" />
+            <End Role="SanPham" EntitySet="SanPhams" />
+          </AssociationSet>
           <AssociationSet Name="FK__NhanVien__Tentk__46E78A0C" Association="Self.FK__NhanVien__Tentk__46E78A0C">
+            <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+            <End Role="NhanVien" EntitySet="NhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NhanVien__Tentk__656C112C" Association="Self.FK__NhanVien__Tentk__656C112C">
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="NhanVien" EntitySet="NhanViens" />
           </AssociationSet>
@@ -381,7 +585,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLPKDTModelStoreContainer" CdmEntityContainer="QLPKDTEntities1">
+        <EntityContainerMapping StorageEntityContainer="QLPKDTModelStoreContainer" CdmEntityContainer="QLPKDTEntities">
           <EntitySetMapping Name="ChiTietDonHangs">
             <EntityTypeMapping TypeName="QLPKDTModel.ChiTietDonHang">
               <MappingFragment StoreEntitySet="ChiTietDonHang">

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Microsoft.Office.Core;
 using QL_DT_LK.Business;
 using QL_DT_LK.DataAcsess;
 
@@ -24,7 +25,7 @@ namespace QL_DT_LK.View
 
         public bool CheckTextBox()
         {
-            if (txtMaNhaCC.Text != "" && txtTenNhaCC.Text != "" && txtSDT.Text != "" && txtEmail.Text != "")
+            if (txtTenNhaCC.Text != "" && txtSDT.Text != "" && txtEmail.Text != "")
             {
                 return true;
             }
@@ -36,7 +37,15 @@ namespace QL_DT_LK.View
             NhaCC ncc = new NhaCC();
             if (CheckTextBox())
             {
-                ncc.MaNCC = txtMaNhaCC.Text;
+                if (!string.IsNullOrEmpty(txtMaNhaCC.Text))
+                {
+                    ncc.MaNCC = txtMaNhaCC.Text;
+                }
+                else
+                {
+                    GenerateRandomString ramdom = new GenerateRandomString();
+                    ncc.MaNCC = ramdom.RandomString(5);
+                }
                 ncc.TenNCC = txtTenNhaCC.Text;
                 ncc.SDTLH = txtSDT.Text;
                 ncc.Email = txtEmail.Text;

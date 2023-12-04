@@ -21,6 +21,8 @@ namespace QL_DT_LK
         public Nullable<double> DonGia { get; set; }
     
         public virtual DonHang DonHang { get; set; }
+        public virtual DonHang DonHang1 { get; set; }
         public virtual SanPham SanPham { get; set; }
+        public virtual SanPham SanPham1 { get; set; }
     }
 }

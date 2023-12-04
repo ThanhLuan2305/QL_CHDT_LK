@@ -18,6 +18,7 @@ namespace QL_DT_LK
         public SanPham()
         {
             this.ChiTietDonHangs = new HashSet<ChiTietDonHang>();
+            this.ChiTietDonHangs1 = new HashSet<ChiTietDonHang>();
         }
     
         public string MaSP { get; set; }
@@ -31,7 +32,11 @@ namespace QL_DT_LK
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietDonHang> ChiTietDonHangs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietDonHang> ChiTietDonHangs1 { get; set; }
         public virtual KhoHang KhoHang { get; set; }
+        public virtual KhoHang KhoHang1 { get; set; }
         public virtual NhaCC NhaCC { get; set; }
+        public virtual NhaCC NhaCC1 { get; set; }
     }
 }

@@ -8,13 +8,12 @@ namespace QL_DT_LK.DataAcsess
 {
     public class TaiKhoanDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public void AddTaiKhoan(TaiKhoan taiKhoan)
         {
             db.TaiKhoans.Add(taiKhoan);
             db.SaveChanges();
         }
-
         public void DeleteTaiKhoan(TaiKhoan taiKhoan)
         {
             db.TaiKhoans.Remove(taiKhoan);
@@ -29,6 +28,5 @@ namespace QL_DT_LK.DataAcsess
         {
             return db.TaiKhoans.FirstOrDefault(s => s.TaiKhoan1 == tentk);
         }
-
     }
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="43f4a0e68d804a2286d84445a4a49eec" Name="Diagram1">
+        <EntityTypeShape EntityType="QLPKDTModel.ChiTietDonHang" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPKDTModel.DonHang" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPKDTModel.KhoHang" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPKDTModel.NhaCC" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPKDTModel.NhanVien" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPKDTModel.SanPham" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPKDTModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="11.875" IsExpanded="true" />
+        <AssociationConnector Association="QLPKDTModel.FK__ChiTietDon__MaDH__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__ChiTietDon__MaDH__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__ChiTietDon__MaSP__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__ChiTietDon__MaSP__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__DonHang__MaNV__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__DonHang__MaNV__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__KhoHang__MaSP__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__KhoHang__MaSP__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__SanPham__MaNCC__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__SanPham__MaNCC__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__NhanVien__Tentk__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPKDTModel.FK__NhanVien__Tentk__656C112C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

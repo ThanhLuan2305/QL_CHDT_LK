@@ -8,7 +8,7 @@ namespace QL_DT_LK.DataAcsess
 {
     public class NhanVienDAL
     {
-        QLPKDTEntities1 db = new QLPKDTEntities1();
+        QLPKDTEntities db = new QLPKDTEntities();
         public List<NhanVien> list()
         {
             return db.NhanViens.ToList<NhanVien>();

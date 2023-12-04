@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QL_DT_LK.Business;
+using QL_DT_LK.Properties;
 
 namespace QL_DT_LK.View
 {
@@ -54,7 +55,6 @@ namespace QL_DT_LK.View
         {
             if 
             (
-                txtMaSP.Text != "" &&
                 cbbNCC.Text != "  Chọn nhà cung cấp" &&
                 cbbHangSP.Text != "  Chọn hãng sản phẩm" &&
                 cbbXuatxu.Text != "  Chọn xuất xứ" &&
@@ -71,7 +71,14 @@ namespace QL_DT_LK.View
             SanPham sp = new SanPham();
             if (CheckTextBox())
             {
-                sp.MaSP = txtMaSP.Text;
+                if (!string.IsNullOrEmpty(txtMaSP.Text))
+                {
+                    sp.MaSP = txtMaSP.Text;
+                } else
+                {
+                    GenerateRandomString ramdom = new GenerateRandomString();
+                    sp.MaSP = ramdom.RandomString(5);
+                }
                 sp.Giaban = float.Parse(txtGiaBan.Text);
                 sp.MaNCC = cbbNCC.Text;
                 sp.XuatXu = cbbXuatxu.Text;
@@ -114,9 +121,14 @@ namespace QL_DT_LK.View
                 cbbTheloai.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cbbXuatxu.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtGiaBan.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[6].Value.ToString();
-                string TenAnh = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value.ToString();
-                Image image = Image.FromFile(@"..\..\Image\" + TenAnh);
-                PTB_SP.Image = image;
+                string TenAnh = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value?.ToString();
+                if (!string.IsNullOrEmpty(TenAnh))
+                {
+                    Image image = Image.FromFile(@"..\..\Image\" + TenAnh);
+                    PTB_SP.Image = image;
+                } 
+
+
             }
             catch(Exception ex)
             {
@@ -233,6 +245,7 @@ namespace QL_DT_LK.View
             cbbXuatxu.Text = "  Chọn xuất xứ";
             cbbTheloai.Text = "Chọn thể loại";
             txtGiaBan.Text = "";
+            PTB_SP.Image = null;
             LoadDataGridView();
         }
 
@@ -283,5 +296,9 @@ namespace QL_DT_LK.View
             }
         }
 
+        private void txtMaSP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
