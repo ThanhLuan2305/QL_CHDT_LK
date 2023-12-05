@@ -76,9 +76,10 @@ namespace QL_DT_LK.View
             LoadForm(a);
             ActiveColor(btnTrangchu);
 
-            lblUserName.Text = FormLogin.GetDataUser.tentaikhoan;
             lblPhanQuyen.Text = FormLogin.GetDataUser.phanquyen;
-            lbTenHinhAnh.Text = FormLogin.GetDataUser.tenAnh; 
+            lblHoTen.Text = FormLogin.GetDataUser.hoTen; 
+            lblSDT.Text = FormLogin.GetDataUser.SDT;
+            lblQQ.Text = FormLogin.GetDataUser.QuenQuan;
             //Gettime
             lblDateTime.Text = GetTimeNow();
             if (lblPhanQuyen.Text == "Nhân Viên")
@@ -88,6 +89,9 @@ namespace QL_DT_LK.View
             }
             ButtonNow = btnTrangchu;
             ButtonNow.ForeColor = Color.FromArgb(225, 82, 61);
+            string TenAnh = FormLogin.GetDataUser.tenAnh;
+            Image image = Image.FromFile(@"..\..\Image\" + TenAnh);
+            PTB_Ava.Image = image;
         }
 
         
@@ -170,6 +174,11 @@ namespace QL_DT_LK.View
         private void chart1_MouseMove(object sender, MouseEventArgs e)
         {
            
+        }
+
+        private void lbTenHinhAnh_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)

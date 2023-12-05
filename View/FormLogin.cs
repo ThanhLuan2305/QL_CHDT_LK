@@ -23,6 +23,9 @@ namespace QL_DT_LK.View
             static public string tentaikhoan;
             static public string phanquyen;
             static public string tenAnh;
+            static public string hoTen;
+            static public string SDT;
+            static public string QuenQuan;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -79,6 +82,8 @@ namespace QL_DT_LK.View
                 {
                     TaiKhoanBUS ql = new TaiKhoanBUS();
                     TaiKhoan tg = ql.TimkiemTK(txtUserName.Text);
+                    NhanVienBUS qlnv = new NhanVienBUS();
+                    NhanVien nv = qlnv.searchNV(txtUserName.Text);
 
                     if (tg != null)
                     {
@@ -88,10 +93,12 @@ namespace QL_DT_LK.View
                             GetDataUser.tentaikhoan = tg.TaiKhoan1;
                             GetDataUser.phanquyen = tg.PhanQuyen;
                             GetDataUser.tenAnh = tg.HinhAnh;
+                            GetDataUser.hoTen = nv.TenNV;
+                            GetDataUser.SDT = nv.SDT;
+                            GetDataUser.QuenQuan = nv.QueQuan;
                             this.Hide();
                             a.Show();
                             a.BringToFront();
-                            waitForm.Close();
                         }
                         else
                         {
@@ -103,7 +110,9 @@ namespace QL_DT_LK.View
                     {
                         MessageBox.Show("Tài khoản không tồn tại !", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     }
+
                 }
+                waitForm.Close();
             }
             catch
             {

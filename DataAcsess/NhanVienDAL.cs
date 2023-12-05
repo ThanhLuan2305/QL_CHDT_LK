@@ -18,6 +18,10 @@ namespace QL_DT_LK.DataAcsess
             bool KetQua = db.DonHangs.Any(o => o.MaNV == maNV);
             return KetQua;
         }
+        public NhanVien SearchNhanVien(string tenTK)
+        {
+            return db.NhanViens.FirstOrDefault(nv => nv.Tentk == tenTK);
+        }
         public string GetNhanVien(string maNV)
         {
 
