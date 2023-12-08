@@ -124,6 +124,9 @@
     <Compile Include="GetLast7DaysOrderTotal_Result.cs">
       <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
+    <Compile Include="k-mean\Cluster.cs" />
+    <Compile Include="k-mean\DataPoint.cs" />
+    <Compile Include="k-mean\DPLimit.cs" />
     <Compile Include="KhoHang.cs">
       <DependentUpon>QLPKDT.tt</DependentUpon>
     </Compile>
@@ -235,6 +238,12 @@
     <Compile Include="View\FormXuatHoaDon.Designer.cs">
       <DependentUpon>FormXuatHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\k-mean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\k-mean.Designer.cs">
+      <DependentUpon>k-mean.cs</DependentUpon>
+    </Compile>
     <Compile Include="WaitFormFunc.cs" />
     <Compile Include="XuatExcel.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -285,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormXuatHoaDon.resx">
       <DependentUpon>FormXuatHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\k-mean.resx">
+      <DependentUpon>k-mean.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

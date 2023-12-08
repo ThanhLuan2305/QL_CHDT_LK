@@ -85,5 +85,11 @@ namespace QL_DT_LK.View
         {
 
         }
+
+        private void PhanTich_Click(object sender, EventArgs e)
+        {
+            k_mean a = new k_mean();
+            a.Show();
+        }
     }
 }

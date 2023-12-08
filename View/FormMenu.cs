@@ -90,12 +90,8 @@ namespace QL_DT_LK.View
             }
             ButtonNow = btnTrangchu;
             ButtonNow.ForeColor = Color.FromArgb(225, 82, 61);
-            string check = FormLogin.GetDataUser.tenAnh.ToString();
-            if (check == "")
-            {
-                MessageBox.Show("Không có ảnh người dùng", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
+            byte[] check = FormLogin.GetDataUser.tenAnh;
+            if (check != null)
             {
                 PTB_Ava.Image = ByteArrayToImg(FormLogin.GetDataUser.tenAnh);
             }

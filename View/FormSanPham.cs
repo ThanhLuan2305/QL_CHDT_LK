@@ -87,7 +87,8 @@ namespace QL_DT_LK.View
                         sp.MaSP = ramdom.RandomString(5);
                     }
                     byte[] b = ImageToByArray(PTRIn.Image);
-                    sp.Giaban = float.Parse(txtGiaBan.Text);
+                sp.Giaban = float.Parse(txtGiaBan.Text);
+                MessageBox.Show(float.Parse(txtGiaBan.Text).ToString());
                     sp.MaNCC = cbbNCC.Text;
                     sp.XuatXu = cbbXuatxu.Text;
                     sp.TheLoai = cbbTheloai.Text;
@@ -129,7 +130,6 @@ namespace QL_DT_LK.View
                 txtGiaBan.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[6].Value.ToString();
             try
             {
-                string a = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value.ToString();
                 byte[] b = (byte[])dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value;
                 PTB_SP.Image = ByteArrayToImg(b);
             }
@@ -326,5 +326,6 @@ namespace QL_DT_LK.View
                 this.Text = file.FileName;
             }
         }
+
     }
 }

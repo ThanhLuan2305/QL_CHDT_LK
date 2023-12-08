@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtgrvNhanVienDoanhThu = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.PhanTich = new CustomButton.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,7 +68,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(64, 61);
+            this.groupBox2.Location = new System.Drawing.Point(186, 55);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(129, 87);
             this.groupBox2.TabIndex = 3;
@@ -91,7 +92,7 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(308, 61);
+            this.groupBox3.Location = new System.Drawing.Point(359, 55);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(129, 87);
             this.groupBox3.TabIndex = 4;
@@ -171,11 +172,32 @@
             this.label3.Text = "Nhân viên xuất sắc";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // PhanTich
+            // 
+            this.PhanTich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PhanTich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PhanTich.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.PhanTich.BorderRadius = 15;
+            this.PhanTich.BorderSize = 0;
+            this.PhanTich.FlatAppearance.BorderSize = 0;
+            this.PhanTich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PhanTich.ForeColor = System.Drawing.Color.White;
+            this.PhanTich.Location = new System.Drawing.Point(33, 82);
+            this.PhanTich.Margin = new System.Windows.Forms.Padding(2);
+            this.PhanTich.Name = "PhanTich";
+            this.PhanTich.Size = new System.Drawing.Size(115, 32);
+            this.PhanTich.TabIndex = 14;
+            this.PhanTich.Text = "Phân Tích";
+            this.PhanTich.TextColor = System.Drawing.Color.White;
+            this.PhanTich.UseVisualStyleBackColor = false;
+            this.PhanTich.Click += new System.EventHandler(this.PhanTich_Click);
+            // 
             // FormDashboar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 542);
+            this.Controls.Add(this.PhanTich);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtgrvNhanVienDoanhThu);
             this.Controls.Add(this.groupBox3);
@@ -204,5 +226,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgrvNhanVienDoanhThu;
         private System.Windows.Forms.Label label3;
+        private CustomButton.VBButton PhanTich;
     }
 }

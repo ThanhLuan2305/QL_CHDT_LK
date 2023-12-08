@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Document\Hoc&Code\HocTap\HK5_Nam3\DocNet\DoAn\Main\QL_CHDT_LK\QLPKDT.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Batolo\Desktop\.net\QL_CHDT_LK\QLPKDT.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
