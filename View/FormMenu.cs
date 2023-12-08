@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,14 +90,21 @@ namespace QL_DT_LK.View
             }
             ButtonNow = btnTrangchu;
             ButtonNow.ForeColor = Color.FromArgb(225, 82, 61);
-            string TenAnh = FormLogin.GetDataUser.tenAnh;
-            Image image = Image.FromFile(@"..\..\Image\" + TenAnh);
-            PTB_Ava.Image = image;
+            string check = FormLogin.GetDataUser.tenAnh.ToString();
+            if (check == "")
+            {
+                MessageBox.Show("Không có ảnh người dùng", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                PTB_Ava.Image = ByteArrayToImg(FormLogin.GetDataUser.tenAnh);
+            }
         }
-
-        
-
-
+        Image ByteArrayToImg(byte[] b)
+        {
+            MemoryStream m = new MemoryStream(b);
+            return Image.FromStream(m);
+        }
         private void panelBody_Paint(object sender, PaintEventArgs e)
         {
 

@@ -40,6 +40,7 @@ namespace QL_DT_LK.DataAcsess
                 spOld.HangSP = spnew.HangSP;
                 spOld.XuatXu = spnew.XuatXu;
                 spOld.Giaban = spnew.Giaban;
+                spOld.HinhAnh = spnew.HinhAnh;
                 db.SaveChanges();
             }
         }

@@ -242,5 +242,12 @@ namespace QL_DT_LK.View
                 MessageBox.Show("Có lỗi khi thực hiện chức năng này !");
             }
         }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            XuatExcel xuatExcel = new XuatExcel();
+            string[] titlecolumn = { "Mã Nhân Viên", "Tên Nhân Viên", "Điện thoại", "Quên Quán", "Email" };
+            xuatExcel.ExportToExcel(dtgrvHienThiListNV, "Danh Sách Nhan Vien", titlecolumn, "DanhSachNhanVien");
+        }
     }
 }

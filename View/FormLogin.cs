@@ -22,7 +22,7 @@ namespace QL_DT_LK.View
         {
             static public string tentaikhoan;
             static public string phanquyen;
-            static public string tenAnh;
+            static public byte[] tenAnh;
             static public string hoTen;
             static public string SDT;
             static public string QuenQuan;
@@ -70,7 +70,7 @@ namespace QL_DT_LK.View
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             WaitFormFunc waitForm = new WaitFormFunc();
-            waitForm.Show(this);
+            //waitForm.Show(this);
             try
             {
                 if (txtUserName.Text == "" || txtPassWoud.Text == "")
@@ -96,7 +96,7 @@ namespace QL_DT_LK.View
                             GetDataUser.hoTen = nv.TenNV;
                             GetDataUser.SDT = nv.SDT;
                             GetDataUser.QuenQuan = nv.QueQuan;
-                            waitForm.Close();
+                            //waitForm.Close();
                             a.Show();
                             this.Hide();
                             a.BringToFront();

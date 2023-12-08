@@ -181,5 +181,16 @@ namespace QL_DT_LK.View
             }
         }
 
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            XuatExcel xuatExcel = new XuatExcel();
+            string[] titlecolumn = { "Mã Nhà CC", "Tên Nhà Cung Cấp", "Hotline", "Email" };
+            xuatExcel.ExportToExcel(dtgrvHienThiListNCC, "Danh Sách Nhà Cung Cấp", titlecolumn, "DanhSachNhaCungCap");
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -94,7 +94,7 @@ namespace QL_DT_LK.View
         {
             XuatExcel xuatExcel = new XuatExcel();
             string[] titlecolumn = { "Mã SP", "Tên Sản Phẩm", "Số lượng tồn", "Ngày Nhập" };
-            xuatExcel.ExportToExcel(dtgrvHienThiListSPKho, "Danh Sách Sản Phẩm Trong Kho", titlecolumn, "Danhsachsanphamkho");
+            xuatExcel.ExportToExcel(dtgrvHienThiListSPKho, "Danh Sách Sản Phẩm Trong Kho", titlecolumn, "DanhSachSanPhamKho");
         }
     }
 }

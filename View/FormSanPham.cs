@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QL_DT_LK.Business;
+using QL_DT_LK.DataAcsess;
 using QL_DT_LK.Properties;
 
 namespace QL_DT_LK.View
@@ -59,7 +62,9 @@ namespace QL_DT_LK.View
                 cbbHangSP.Text != "  Chọn hãng sản phẩm" &&
                 cbbXuatxu.Text != "  Chọn xuất xứ" &&
                 cbbTheloai.Text != "Chọn thể loại" &&
-                txtGiaBan.Text != ""
+                txtGiaBan.Text != "" &&
+                PTRIn.Image != null
+                
             )
             {
                 return true;
@@ -68,31 +73,34 @@ namespace QL_DT_LK.View
         }
         public SanPham ObjectSP()
         {
-            SanPham sp = new SanPham();
-            if (CheckTextBox())
-            {
-                if (!string.IsNullOrEmpty(txtMaSP.Text))
+           
+                SanPham sp = new SanPham();
+                if (CheckTextBox())
                 {
-                    sp.MaSP = txtMaSP.Text;
-                } else
-                {
-                    GenerateRandomString ramdom = new GenerateRandomString();
-                    sp.MaSP = ramdom.RandomString(5);
+                    if (!string.IsNullOrEmpty(txtMaSP.Text))
+                    {
+                        sp.MaSP = txtMaSP.Text;
+                    }
+                    else
+                    {
+                        GenerateRandomString ramdom = new GenerateRandomString();
+                        sp.MaSP = ramdom.RandomString(5);
+                    }
+                    byte[] b = ImageToByArray(PTRIn.Image);
+                    sp.Giaban = float.Parse(txtGiaBan.Text);
+                    sp.MaNCC = cbbNCC.Text;
+                    sp.XuatXu = cbbXuatxu.Text;
+                    sp.TheLoai = cbbTheloai.Text;
+                    sp.HangSP = cbbHangSP.Text;
+                    sp.TenSP = txtTenSP.Text;
+                    sp.HinhAnh = b;
+                    return sp;
                 }
-                sp.Giaban = float.Parse(txtGiaBan.Text);
-                sp.MaNCC = cbbNCC.Text;
-                sp.XuatXu = cbbXuatxu.Text;
-                sp.TheLoai = cbbTheloai.Text;
-                sp.HangSP = cbbHangSP.Text;
-                sp.TenSP = txtTenSP.Text;
-                return sp;
-            }
-            else
-            {
-                sp = null;
-                return sp;
-            }
-
+                else
+                {
+                    sp = null;
+                    return sp;
+                }
         }
         public bool checkItemCombobox()
         {
@@ -112,8 +120,6 @@ namespace QL_DT_LK.View
         }
         private void dtgrvHienThiListSP_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
                 txtMaSP.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[0].Value.ToString();
                 cbbNCC.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[1].Value.ToString();
                 cbbHangSP.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -121,21 +127,23 @@ namespace QL_DT_LK.View
                 cbbTheloai.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[4].Value.ToString();
                 cbbXuatxu.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtGiaBan.Text = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[6].Value.ToString();
-                string TenAnh = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value?.ToString();
-                if (!string.IsNullOrEmpty(TenAnh))
-                {
-                    Image image = Image.FromFile(@"..\..\Image\" + TenAnh);
-                    PTB_SP.Image = image;
-                } 
-
-
-            }
-            catch(Exception ex)
+            try
             {
-                MessageBox.Show("Có lỗi khi thực hiện chức năng này !. Lỗi: " + ex);
+                string a = dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value.ToString();
+                byte[] b = (byte[])dtgrvHienThiListSP.Rows[e.RowIndex].Cells[7].Value;
+                PTB_SP.Image = ByteArrayToImg(b);
             }
+            catch
+            {
+                MessageBox.Show("Không có ảnh", "Thông báo", MessageBoxButtons.OK);
+            }
+                
         }
-
+        Image ByteArrayToImg(byte[] b)
+        {
+            MemoryStream m = new MemoryStream(b);
+            return Image.FromStream(m);
+        }
         private void btnAddNV_Click(object sender, EventArgs e)
         {
             if (ObjectSP() != null)
@@ -146,6 +154,7 @@ namespace QL_DT_LK.View
                     if (ql.AddSP(a))
                     {
                         listSP.Add(a);
+                        PTRIn.Image = null;
                         LoadDataGridView();
                         MessageBox.Show("Thêm sản phẩm thành công !");
                     }
@@ -179,6 +188,7 @@ namespace QL_DT_LK.View
                         if (ql.ReplaceSP(ObjectSP()))
                         {
                             LoadDataGridView();
+                            PTRIn.Image = null;
                             MessageBox.Show("Sửa sản phẩm thành công !");
                         }
                         else
@@ -246,6 +256,7 @@ namespace QL_DT_LK.View
             cbbTheloai.Text = "Chọn thể loại";
             txtGiaBan.Text = "";
             PTB_SP.Image = null;
+            PTRIn.Image = null;
             LoadDataGridView();
         }
 
@@ -299,6 +310,21 @@ namespace QL_DT_LK.View
         private void txtMaSP_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        byte[] ImageToByArray(Image img)
+        {
+            MemoryStream m = new MemoryStream();
+            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
+            return m.ToArray();
+        }
+        private void PTRIn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                PTRIn.Image = Image.FromFile(file.FileName);
+                this.Text = file.FileName;
+            }
         }
     }
 }
